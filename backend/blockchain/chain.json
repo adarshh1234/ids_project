@@ -1229,5 +1229,6077 @@
     "previous_hash": "00eba8c013933d3c6280a6c0376bd27520d4697cdb9d8f8283733349829550d4",
     "hash": "009435029a341226a592e2ca3234a240d7733588e3e9d78ef12a1858e7b25e79",
     "nonce": 120
+  },
+  {
+    "index": 38,
+    "timestamp": 1773941759.595207,
+    "data": {
+      "alert_id": 38,
+      "timestamp": "2026-03-19 23:05:59.579367",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009435029a341226a592e2ca3234a240d7733588e3e9d78ef12a1858e7b25e79",
+    "hash": "00ab21ba637bb98968c2b92cf78e1b1a05e4bc8f91ee36cce271bbd216adfe0b",
+    "nonce": 12
+  },
+  {
+    "index": 39,
+    "timestamp": 1773943593.982993,
+    "data": {
+      "alert_id": 39,
+      "timestamp": "2026-03-19 23:36:33.979003",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00ab21ba637bb98968c2b92cf78e1b1a05e4bc8f91ee36cce271bbd216adfe0b",
+    "hash": "00f6d2bc43a3fd3d6f4cb2cfaca685f49ee7b2e066052a15289ebc6b5dd88dfc",
+    "nonce": 74
+  },
+  {
+    "index": 40,
+    "timestamp": 1773943595.1495302,
+    "data": {
+      "alert_id": 40,
+      "timestamp": "2026-03-19 23:36:35.131141",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00f6d2bc43a3fd3d6f4cb2cfaca685f49ee7b2e066052a15289ebc6b5dd88dfc",
+    "hash": "0040d82440c5faa514705077184ec9d1ea1a860538926645abb28dca49689111",
+    "nonce": 114
+  },
+  {
+    "index": 41,
+    "timestamp": 1773943597.4279191,
+    "data": {
+      "alert_id": 41,
+      "timestamp": "2026-03-19 23:36:37.409045",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0040d82440c5faa514705077184ec9d1ea1a860538926645abb28dca49689111",
+    "hash": "00f9b622965247cd106b2b574a0d59a5e9c64c3a023fc427e2a45d174542b9b2",
+    "nonce": 42
+  },
+  {
+    "index": 42,
+    "timestamp": 1773943598.4114573,
+    "data": {
+      "alert_id": 42,
+      "timestamp": "2026-03-19 23:36:38.406720",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00f9b622965247cd106b2b574a0d59a5e9c64c3a023fc427e2a45d174542b9b2",
+    "hash": "0091eac4d46e1f5318d5b432d6ca6fa6e75af4b438d46dd0146d942198a7567e",
+    "nonce": 1074
+  },
+  {
+    "index": 43,
+    "timestamp": 1773943598.8507273,
+    "data": {
+      "alert_id": 43,
+      "timestamp": "2026-03-19 23:36:38.844150",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0091eac4d46e1f5318d5b432d6ca6fa6e75af4b438d46dd0146d942198a7567e",
+    "hash": "0076a57d9484c8c3128a852ce48c84fc42cb343921efaf9b16c9d0e0f4e37c97",
+    "nonce": 397
+  },
+  {
+    "index": 44,
+    "timestamp": 1773943599.2778776,
+    "data": {
+      "alert_id": 44,
+      "timestamp": "2026-03-19 23:36:39.270523",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0076a57d9484c8c3128a852ce48c84fc42cb343921efaf9b16c9d0e0f4e37c97",
+    "hash": "005c340024beab73013544284e24f80c4d8c0e9d4733ec8b5b0135a29fad34a2",
+    "nonce": 104
+  },
+  {
+    "index": 45,
+    "timestamp": 1773943600.0193303,
+    "data": {
+      "alert_id": 45,
+      "timestamp": "2026-03-19 23:36:40.002146",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "005c340024beab73013544284e24f80c4d8c0e9d4733ec8b5b0135a29fad34a2",
+    "hash": "00fdaecae89c3286ca005ce5435a0a9e0a2efb8f9beb9be012e8f0b77de91a18",
+    "nonce": 701
+  },
+  {
+    "index": 46,
+    "timestamp": 1773943600.5296085,
+    "data": {
+      "alert_id": 46,
+      "timestamp": "2026-03-19 23:36:40.512735",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00fdaecae89c3286ca005ce5435a0a9e0a2efb8f9beb9be012e8f0b77de91a18",
+    "hash": "006414e9a6792a221d5fcbda11edd64321b0e1f661f3b401332e39b74793768e",
+    "nonce": 88
+  },
+  {
+    "index": 47,
+    "timestamp": 1773943600.8119879,
+    "data": {
+      "alert_id": 47,
+      "timestamp": "2026-03-19 23:36:40.793638",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "006414e9a6792a221d5fcbda11edd64321b0e1f661f3b401332e39b74793768e",
+    "hash": "00cf6d5bc02c2d47a6a9d7730d95cab2fd7cea55a41ac363dd0b052ce91532e8",
+    "nonce": 86
+  },
+  {
+    "index": 48,
+    "timestamp": 1773943601.0227616,
+    "data": {
+      "alert_id": 48,
+      "timestamp": "2026-03-19 23:36:41.018709",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00cf6d5bc02c2d47a6a9d7730d95cab2fd7cea55a41ac363dd0b052ce91532e8",
+    "hash": "000ac4bdf31a3c43d19bb0568f45ef36b42c3f113dd1a060e96c33fd27df4c70",
+    "nonce": 31
+  },
+  {
+    "index": 49,
+    "timestamp": 1773943601.2648122,
+    "data": {
+      "alert_id": 49,
+      "timestamp": "2026-03-19 23:36:41.259311",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "000ac4bdf31a3c43d19bb0568f45ef36b42c3f113dd1a060e96c33fd27df4c70",
+    "hash": "00f8e9e54f59ef6400bb601615ace005d41a071808ba96c65f3ae121e0710de7",
+    "nonce": 89
+  },
+  {
+    "index": 50,
+    "timestamp": 1773943601.4606266,
+    "data": {
+      "alert_id": 50,
+      "timestamp": "2026-03-19 23:36:41.460626",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00f8e9e54f59ef6400bb601615ace005d41a071808ba96c65f3ae121e0710de7",
+    "hash": "005868c86b2a6b9f8013846ad370d99bd688fefb4e7345c2311566a36e072637",
+    "nonce": 25
+  },
+  {
+    "index": 51,
+    "timestamp": 1773943601.6938012,
+    "data": {
+      "alert_id": 51,
+      "timestamp": "2026-03-19 23:36:41.690394",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "005868c86b2a6b9f8013846ad370d99bd688fefb4e7345c2311566a36e072637",
+    "hash": "003ea8a0b1e0e7f08d2f98461013292f1a297836dfc6c40d3069095378c7ce1c",
+    "nonce": 287
+  },
+  {
+    "index": 52,
+    "timestamp": 1773943932.9878566,
+    "data": {
+      "alert_id": 52,
+      "timestamp": "2026-03-19 23:42:12.971142",
+      "source_ip": "192.168.1.1",
+      "destination_ip": "10.0.0.1",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.03243993466134854,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "003ea8a0b1e0e7f08d2f98461013292f1a297836dfc6c40d3069095378c7ce1c",
+    "hash": "006429df1feba1d177834ef0a7b047adc4c800d99abc4b2924e84a038c4e413d",
+    "nonce": 81
+  },
+  {
+    "index": 53,
+    "timestamp": 1773945413.0116189,
+    "data": {
+      "alert_id": 53,
+      "timestamp": "2026-03-20 00:06:52.989337",
+      "source_ip": "10.93.49.241",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 76.2,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.10795124708152434,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "006429df1feba1d177834ef0a7b047adc4c800d99abc4b2924e84a038c4e413d",
+    "hash": "00dacdf1bd9ad25f20bb8edb5f0193c1263602cf7f2dc20096573a16b2c2444b",
+    "nonce": 64
+  },
+  {
+    "index": 54,
+    "timestamp": 1773945413.071079,
+    "data": {
+      "alert_id": 54,
+      "timestamp": "2026-03-20 00:06:53.062849",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "10.93.49.241",
+      "attack_category": "Normal",
+      "confidence": 74.43,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09113629791085168,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00dacdf1bd9ad25f20bb8edb5f0193c1263602cf7f2dc20096573a16b2c2444b",
+    "hash": "00b123aac7e85106ee64e16db5b0d1297e8f18c2d92decdd099ed2a97e9eee52",
+    "nonce": 24
+  },
+  {
+    "index": 55,
+    "timestamp": 1773945415.1362553,
+    "data": {
+      "alert_id": 55,
+      "timestamp": "2026-03-20 00:06:55.127636",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "10.93.49.241",
+      "attack_category": "Normal",
+      "confidence": 75.36,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09113629791085168,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00b123aac7e85106ee64e16db5b0d1297e8f18c2d92decdd099ed2a97e9eee52",
+    "hash": "00b4aa94b4961d8094fe7a0fc968700f70d3d2d1579dd6308da0f56a68c50766",
+    "nonce": 59
+  },
+  {
+    "index": 56,
+    "timestamp": 1773945417.2735605,
+    "data": {
+      "alert_id": 56,
+      "timestamp": "2026-03-20 00:06:57.268070",
+      "source_ip": "10.93.49.241",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 76.2,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.10795124708152434,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00b4aa94b4961d8094fe7a0fc968700f70d3d2d1579dd6308da0f56a68c50766",
+    "hash": "00f20edd5fbb4d7ed096de32eb394d3f6af9f3bc20def582c8f83fc882af9076",
+    "nonce": 131
+  },
+  {
+    "index": 57,
+    "timestamp": 1773945419.5043974,
+    "data": {
+      "alert_id": 57,
+      "timestamp": "2026-03-20 00:06:59.496046",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "79.153.195.164",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00f20edd5fbb4d7ed096de32eb394d3f6af9f3bc20def582c8f83fc882af9076",
+    "hash": "000e208e318152cdbbf89c5d7ca7b259372b85ebf770e44e1af8efab6e3e0b0b",
+    "nonce": 61
+  },
+  {
+    "index": 58,
+    "timestamp": 1773945421.653736,
+    "data": {
+      "alert_id": 58,
+      "timestamp": "2026-03-20 00:07:01.648970",
+      "source_ip": "98.70.194.77",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 69.67,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.12790375079989677,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08223729626469774,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "000e208e318152cdbbf89c5d7ca7b259372b85ebf770e44e1af8efab6e3e0b0b",
+    "hash": "007592caff58c2db39427534651ce8f95ec34276e75d495b80246970aefcb907",
+    "nonce": 581
+  },
+  {
+    "index": 59,
+    "timestamp": 1773945423.8267686,
+    "data": {
+      "alert_id": 59,
+      "timestamp": "2026-03-20 00:07:03.811356",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "90.130.127.128",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "007592caff58c2db39427534651ce8f95ec34276e75d495b80246970aefcb907",
+    "hash": "0001d6b9d774c0df79f822f2a259202fced37ea34ab4aa683f2ccf429bc5b5aa",
+    "nonce": 30
+  },
+  {
+    "index": 60,
+    "timestamp": 1773945425.9583347,
+    "data": {
+      "alert_id": 60,
+      "timestamp": "2026-03-20 00:07:05.951734",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "20.189.172.33",
+      "attack_category": "Normal",
+      "confidence": 69.58,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0001d6b9d774c0df79f822f2a259202fced37ea34ab4aa683f2ccf429bc5b5aa",
+    "hash": "00b5bd1cd0ef2baad149994d858a147b6547c45671c286a92325fabddfcf6fcf",
+    "nonce": 508
+  },
+  {
+    "index": 61,
+    "timestamp": 1773945428.0936143,
+    "data": {
+      "alert_id": 61,
+      "timestamp": "2026-03-20 00:07:08.085615",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "118.214.128.107",
+      "attack_category": "Normal",
+      "confidence": 73.7,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00b5bd1cd0ef2baad149994d858a147b6547c45671c286a92325fabddfcf6fcf",
+    "hash": "0012acaeb49b2b9108e2dabdfa8d063dd4c1f71ecd25a230c552c42281c80ca2",
+    "nonce": 349
+  },
+  {
+    "index": 62,
+    "timestamp": 1773945430.2348275,
+    "data": {
+      "alert_id": 62,
+      "timestamp": "2026-03-20 00:07:10.226874",
+      "source_ip": "118.214.128.107",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 71.63,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.12790375079989677,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0012acaeb49b2b9108e2dabdfa8d063dd4c1f71ecd25a230c552c42281c80ca2",
+    "hash": "00be7cd5c23b0f2f6064fd2acdd42f2b251fa4a6aa2e71a6ae2de7aad5533836",
+    "nonce": 144
+  },
+  {
+    "index": 63,
+    "timestamp": 1773945432.3870378,
+    "data": {
+      "alert_id": 63,
+      "timestamp": "2026-03-20 00:07:12.383471",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "118.214.128.107",
+      "attack_category": "Normal",
+      "confidence": 59.71,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00be7cd5c23b0f2f6064fd2acdd42f2b251fa4a6aa2e71a6ae2de7aad5533836",
+    "hash": "000ee381f1e301cd287f528e07f89b7f573499270977098ffc5c6e3bdac7c456",
+    "nonce": 46
+  },
+  {
+    "index": 64,
+    "timestamp": 1773945434.512908,
+    "data": {
+      "alert_id": 64,
+      "timestamp": "2026-03-20 00:07:14.508895",
+      "source_ip": "20.189.172.33",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 65.7,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.12790375079989677,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08223729626469774,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "000ee381f1e301cd287f528e07f89b7f573499270977098ffc5c6e3bdac7c456",
+    "hash": "0096434d0a2a0a4e706edf8ad70ee587a2f5011f91110200a7604e5ab5ccde5c",
+    "nonce": 111
+  },
+  {
+    "index": 65,
+    "timestamp": 1773945436.708241,
+    "data": {
+      "alert_id": 65,
+      "timestamp": "2026-03-20 00:07:16.690653",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "140.82.114.21",
+      "attack_category": "Normal",
+      "confidence": 68.92,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0096434d0a2a0a4e706edf8ad70ee587a2f5011f91110200a7604e5ab5ccde5c",
+    "hash": "009e04e844b80b7abd6690898b267cfad15a65258c57fccc2d1e8708ca5135f5",
+    "nonce": 38
+  },
+  {
+    "index": 66,
+    "timestamp": 1773945438.8329813,
+    "data": {
+      "alert_id": 66,
+      "timestamp": "2026-03-20 00:07:18.824179",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "140.82.112.22",
+      "attack_category": "Normal",
+      "confidence": 69.42,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09113629791085168,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009e04e844b80b7abd6690898b267cfad15a65258c57fccc2d1e8708ca5135f5",
+    "hash": "006ec052af5d24d4602635d0e233f946cfa45062fe11a2c6b9a934efee62818c",
+    "nonce": 516
+  },
+  {
+    "index": 67,
+    "timestamp": 1773945440.9777675,
+    "data": {
+      "alert_id": 67,
+      "timestamp": "2026-03-20 00:07:20.963605",
+      "source_ip": "140.82.114.21",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 70.71,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.12790375079989677,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "006ec052af5d24d4602635d0e233f946cfa45062fe11a2c6b9a934efee62818c",
+    "hash": "00c69ac55359947d93acc2d5f6d4549eba33ce5b1cda4bc79271abc440a75b5e",
+    "nonce": 308
+  },
+  {
+    "index": 68,
+    "timestamp": 1773945443.147566,
+    "data": {
+      "alert_id": 68,
+      "timestamp": "2026-03-20 00:07:23.132081",
+      "source_ip": "140.82.112.22",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 70.71,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.11792749894071054,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00c69ac55359947d93acc2d5f6d4549eba33ce5b1cda4bc79271abc440a75b5e",
+    "hash": "0088a6b1dfa1af903e8ababe296c8aa40a8483b0ae18fd11772e5252e17ee8ea",
+    "nonce": 698
+  },
+  {
+    "index": 69,
+    "timestamp": 1773945445.3038697,
+    "data": {
+      "alert_id": 69,
+      "timestamp": "2026-03-20 00:07:25.297647",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "13.107.5.93",
+      "attack_category": "Normal",
+      "confidence": 76.23,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0088a6b1dfa1af903e8ababe296c8aa40a8483b0ae18fd11772e5252e17ee8ea",
+    "hash": "00dbc70071e8395d0abcfc309a4b1ab1102ce379372deb161c22770f8a71ecc3",
+    "nonce": 409
+  },
+  {
+    "index": 70,
+    "timestamp": 1773945447.4681633,
+    "data": {
+      "alert_id": 70,
+      "timestamp": "2026-03-20 00:07:27.464237",
+      "source_ip": "13.107.5.93",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 71.04,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.09654981638531152,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00dbc70071e8395d0abcfc309a4b1ab1102ce379372deb161c22770f8a71ecc3",
+    "hash": "004e67b482f755a2e90511d90703beddf8cbbb209d6ee849b491f8f90f8ec667",
+    "nonce": 383
+  },
+  {
+    "index": 71,
+    "timestamp": 1773945449.6281428,
+    "data": {
+      "alert_id": 71,
+      "timestamp": "2026-03-20 00:07:29.611904",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "119.131.90.23",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004e67b482f755a2e90511d90703beddf8cbbb209d6ee849b491f8f90f8ec667",
+    "hash": "003e2214907e0eec4858c717a8787c54c07078f0de0b333b8a54b7153e7a1f9c",
+    "nonce": 90
+  },
+  {
+    "index": 72,
+    "timestamp": 1773945451.8040016,
+    "data": {
+      "alert_id": 72,
+      "timestamp": "2026-03-20 00:07:31.786770",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "140.82.112.22",
+      "attack_category": "Normal",
+      "confidence": 72.47,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09113629791085168,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "003e2214907e0eec4858c717a8787c54c07078f0de0b333b8a54b7153e7a1f9c",
+    "hash": "00bd6419beec7d468936031ca001f15b7c9384d9f359081414711016101c1f1a",
+    "nonce": 334
+  },
+  {
+    "index": 73,
+    "timestamp": 1773945453.9653206,
+    "data": {
+      "alert_id": 73,
+      "timestamp": "2026-03-20 00:07:33.959138",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "52.140.118.28",
+      "attack_category": "Normal",
+      "confidence": 67.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00bd6419beec7d468936031ca001f15b7c9384d9f359081414711016101c1f1a",
+    "hash": "0003779a1d28c2c0c1b6e654e7ce0d6c293bdac3427ea290fb0331d090cdaeef",
+    "nonce": 281
+  },
+  {
+    "index": 74,
+    "timestamp": 1773945456.102981,
+    "data": {
+      "alert_id": 74,
+      "timestamp": "2026-03-20 00:07:36.096382",
+      "source_ip": "140.82.112.22",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 71.63,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.11792749894071054,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0003779a1d28c2c0c1b6e654e7ce0d6c293bdac3427ea290fb0331d090cdaeef",
+    "hash": "00ac2128c8c27cea44e42614ced213128fd3bb4fb2ae971b9c1b77006ca063f5",
+    "nonce": 218
+  },
+  {
+    "index": 75,
+    "timestamp": 1773945458.2513998,
+    "data": {
+      "alert_id": 75,
+      "timestamp": "2026-03-20 00:07:38.243417",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "140.82.112.22",
+      "attack_category": "Normal",
+      "confidence": 60.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09113629791085168,
+          "impact": "negative"
+        },
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.06752425667353755,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00ac2128c8c27cea44e42614ced213128fd3bb4fb2ae971b9c1b77006ca063f5",
+    "hash": "00fb32110632bdf21a09d71198b7b10ce45b312775e2c256cba438e960c25eef",
+    "nonce": 185
+  },
+  {
+    "index": 76,
+    "timestamp": 1773945460.409462,
+    "data": {
+      "alert_id": 76,
+      "timestamp": "2026-03-20 00:07:40.401062",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "13.107.5.93",
+      "attack_category": "Normal",
+      "confidence": 75.49,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00fb32110632bdf21a09d71198b7b10ce45b312775e2c256cba438e960c25eef",
+    "hash": "009e89b5addf55d4ce2ee193d23be2d44e10be727144a62497377e4dd87ddaaf",
+    "nonce": 55
+  },
+  {
+    "index": 77,
+    "timestamp": 1773945462.6093297,
+    "data": {
+      "alert_id": 77,
+      "timestamp": "2026-03-20 00:07:42.592022",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "13.107.5.93",
+      "attack_category": "Normal",
+      "confidence": 76.23,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009e89b5addf55d4ce2ee193d23be2d44e10be727144a62497377e4dd87ddaaf",
+    "hash": "00808bdee1cb08b42a15e7db4bcb6f4bcfe88104b6bf9a4abb6a509cf34766cc",
+    "nonce": 57
+  },
+  {
+    "index": 78,
+    "timestamp": 1773945464.7540674,
+    "data": {
+      "alert_id": 78,
+      "timestamp": "2026-03-20 00:07:44.737677",
+      "source_ip": "13.107.5.93",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 71.04,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.09654981638531152,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00808bdee1cb08b42a15e7db4bcb6f4bcfe88104b6bf9a4abb6a509cf34766cc",
+    "hash": "00daac00d4dc793e9da48740e64cf522f23fc20ae0be8306b4798bab491654f8",
+    "nonce": 705
+  },
+  {
+    "index": 79,
+    "timestamp": 1773945466.9041421,
+    "data": {
+      "alert_id": 79,
+      "timestamp": "2026-03-20 00:07:46.887995",
+      "source_ip": "13.107.5.93",
+      "destination_ip": "10.93.49.114",
+      "attack_category": "Normal",
+      "confidence": 71.04,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.09654981638531152,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00daac00d4dc793e9da48740e64cf522f23fc20ae0be8306b4798bab491654f8",
+    "hash": "00c7f68a7c08aadc2d3b95ca07cb3c82df89b44907ea9602c82bb913c7a405fe",
+    "nonce": 42
+  },
+  {
+    "index": 80,
+    "timestamp": 1773945469.061868,
+    "data": {
+      "alert_id": 80,
+      "timestamp": "2026-03-20 00:07:49.056060",
+      "source_ip": "10.93.49.114",
+      "destination_ip": "20.189.172.33",
+      "attack_category": "Normal",
+      "confidence": 71.78,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00c7f68a7c08aadc2d3b95ca07cb3c82df89b44907ea9602c82bb913c7a405fe",
+    "hash": "002e754f413e0f902c9fca5332337e912bb381929e424447ff950f8cfcf5ebc2",
+    "nonce": 70
+  },
+  {
+    "index": 81,
+    "timestamp": 1773945549.9099128,
+    "data": {
+      "alert_id": 81,
+      "timestamp": "2026-03-20 00:09:09.902691",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "002e754f413e0f902c9fca5332337e912bb381929e424447ff950f8cfcf5ebc2",
+    "hash": "0071e64b7aacf819b88089e06b7cff875826bbe9416b302f7adcc844f21fd67e",
+    "nonce": 121
+  },
+  {
+    "index": 82,
+    "timestamp": 1773945551.7919283,
+    "data": {
+      "alert_id": 82,
+      "timestamp": "2026-03-20 00:09:11.772341",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0071e64b7aacf819b88089e06b7cff875826bbe9416b302f7adcc844f21fd67e",
+    "hash": "004a62267482af1aef0f3e5559cda18727e8f4f5674bc3b9919072dcb3595206",
+    "nonce": 519
+  },
+  {
+    "index": 83,
+    "timestamp": 1773945552.44301,
+    "data": {
+      "alert_id": 83,
+      "timestamp": "2026-03-20 00:09:12.436367",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004a62267482af1aef0f3e5559cda18727e8f4f5674bc3b9919072dcb3595206",
+    "hash": "00eb020f9fd74e26b3413974dde45fb0ca434b981db9aefc1a59589869de9e4c",
+    "nonce": 151
+  },
+  {
+    "index": 84,
+    "timestamp": 1773945553.203726,
+    "data": {
+      "alert_id": 84,
+      "timestamp": "2026-03-20 00:09:13.197223",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00eb020f9fd74e26b3413974dde45fb0ca434b981db9aefc1a59589869de9e4c",
+    "hash": "006fc6383f489cec1b133008b4ebee3f71129fe6fb1ddd7fa003442af59f3446",
+    "nonce": 46
+  },
+  {
+    "index": 85,
+    "timestamp": 1773945553.5687203,
+    "data": {
+      "alert_id": 85,
+      "timestamp": "2026-03-20 00:09:13.561223",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "006fc6383f489cec1b133008b4ebee3f71129fe6fb1ddd7fa003442af59f3446",
+    "hash": "0080837370892a526cc1c283ce80e6ee330522e758db4f60d9ffbe2fe4fcc850",
+    "nonce": 694
+  },
+  {
+    "index": 86,
+    "timestamp": 1773945554.4257758,
+    "data": {
+      "alert_id": 86,
+      "timestamp": "2026-03-20 00:09:14.422479",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0080837370892a526cc1c283ce80e6ee330522e758db4f60d9ffbe2fe4fcc850",
+    "hash": "00d7376002ef369ce3b45a7439091d382003158dff73d337d19f357385f24eee",
+    "nonce": 49
+  },
+  {
+    "index": 87,
+    "timestamp": 1773945555.4433973,
+    "data": {
+      "alert_id": 87,
+      "timestamp": "2026-03-20 00:09:15.438413",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00d7376002ef369ce3b45a7439091d382003158dff73d337d19f357385f24eee",
+    "hash": "009678776b336187cf3874add044766aa614f8e60f99a835be214b4b6424e2b3",
+    "nonce": 58
+  },
+  {
+    "index": 88,
+    "timestamp": 1773945556.0788188,
+    "data": {
+      "alert_id": 88,
+      "timestamp": "2026-03-20 00:09:16.064169",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009678776b336187cf3874add044766aa614f8e60f99a835be214b4b6424e2b3",
+    "hash": "0082b2fa607d498c983c492bbd3769d841973add21d54ea73797d2676bb914f5",
+    "nonce": 53
+  },
+  {
+    "index": 89,
+    "timestamp": 1773945743.9238575,
+    "data": {
+      "alert_id": 89,
+      "timestamp": "2026-03-20 00:12:23.915596",
+      "source_ip": "192.168.1.1",
+      "destination_ip": "10.0.0.1",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.03243993466134854,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0082b2fa607d498c983c492bbd3769d841973add21d54ea73797d2676bb914f5",
+    "hash": "004e34ba42733094f5b8af3e73a85b93efc3cd53b64f9bf15fcce192245ac7c8",
+    "nonce": 56
+  },
+  {
+    "index": 90,
+    "timestamp": 1773945899.2447715,
+    "data": {
+      "alert_id": 90,
+      "timestamp": "2026-03-20 00:14:59.241612",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 62.95,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.05937419585448997,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": -0.05679210503649386,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004e34ba42733094f5b8af3e73a85b93efc3cd53b64f9bf15fcce192245ac7c8",
+    "hash": "00b49a3559cc1b452d90f470bff6e63adb520c5d2f98555c11ba03e2b13ffc72",
+    "nonce": 43
+  },
+  {
+    "index": 91,
+    "timestamp": 1773945905.8841534,
+    "data": {
+      "alert_id": 91,
+      "timestamp": "2026-03-20 00:15:05.879874",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 62.95,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.05937419585448997,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": -0.05679210503649386,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00b49a3559cc1b452d90f470bff6e63adb520c5d2f98555c11ba03e2b13ffc72",
+    "hash": "0055df10248a6a8b9c79ecb76325e1477e006bff40e9a09ad9b2ccbdd6f772d5",
+    "nonce": 112
+  },
+  {
+    "index": 92,
+    "timestamp": 1773945908.8395648,
+    "data": {
+      "alert_id": 92,
+      "timestamp": "2026-03-20 00:15:08.837364",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0055df10248a6a8b9c79ecb76325e1477e006bff40e9a09ad9b2ccbdd6f772d5",
+    "hash": "00244e6e498470355ed66af73a2fb14e0c5a7c6796e20cd0faee2e225cd01d90",
+    "nonce": 517
+  },
+  {
+    "index": 93,
+    "timestamp": 1773948016.3441656,
+    "data": {
+      "alert_id": 93,
+      "timestamp": "2026-03-20 00:50:16.328588",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00244e6e498470355ed66af73a2fb14e0c5a7c6796e20cd0faee2e225cd01d90",
+    "hash": "00631097a7e50c35677bdc71eafa4d5e5786432b39462482735750a6b9f1e03e",
+    "nonce": 63
+  },
+  {
+    "index": 94,
+    "timestamp": 1773948018.1280289,
+    "data": {
+      "alert_id": 94,
+      "timestamp": "2026-03-20 00:50:18.114240",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00631097a7e50c35677bdc71eafa4d5e5786432b39462482735750a6b9f1e03e",
+    "hash": "00704c73d2be17ca9e65ef892096170bbb6cc4517eb9d4fe8497fa435c755cf9",
+    "nonce": 321
+  },
+  {
+    "index": 95,
+    "timestamp": 1773948018.725686,
+    "data": {
+      "alert_id": 95,
+      "timestamp": "2026-03-20 00:50:18.716351",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00704c73d2be17ca9e65ef892096170bbb6cc4517eb9d4fe8497fa435c755cf9",
+    "hash": "007d1c0b3cc2f0bc9bf116a852e22bbea7ab4a92acd5f35e58e977157815919e",
+    "nonce": 378
+  },
+  {
+    "index": 96,
+    "timestamp": 1773948018.9782393,
+    "data": {
+      "alert_id": 96,
+      "timestamp": "2026-03-20 00:50:18.961165",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "007d1c0b3cc2f0bc9bf116a852e22bbea7ab4a92acd5f35e58e977157815919e",
+    "hash": "009713729d73df632de3f559a24cb9cbaa609565f59b0b9c1ab12a965e6ea614",
+    "nonce": 69
+  },
+  {
+    "index": 97,
+    "timestamp": 1773948019.3605871,
+    "data": {
+      "alert_id": 97,
+      "timestamp": "2026-03-20 00:50:19.352808",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009713729d73df632de3f559a24cb9cbaa609565f59b0b9c1ab12a965e6ea614",
+    "hash": "003d3cdc0287718281fc361e6fd9e7afe97f0a606430975511833a32a9a55a36",
+    "nonce": 202
+  },
+  {
+    "index": 98,
+    "timestamp": 1773948019.7682974,
+    "data": {
+      "alert_id": 98,
+      "timestamp": "2026-03-20 00:50:19.760443",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "003d3cdc0287718281fc361e6fd9e7afe97f0a606430975511833a32a9a55a36",
+    "hash": "00e358833eb1ee1496aad9d506808ea0744e6977566a9b24c2fb760158e0baba",
+    "nonce": 328
+  },
+  {
+    "index": 99,
+    "timestamp": 1773948020.5887928,
+    "data": {
+      "alert_id": 99,
+      "timestamp": "2026-03-20 00:50:20.574085",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00e358833eb1ee1496aad9d506808ea0744e6977566a9b24c2fb760158e0baba",
+    "hash": "00634f138ac6e456d43142a0c6a2353044edcf5342bd8ad6d86492cab98aa8c8",
+    "nonce": 2
+  },
+  {
+    "index": 100,
+    "timestamp": 1773948024.0770118,
+    "data": {
+      "alert_id": 100,
+      "timestamp": "2026-03-20 00:50:24.060378",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00634f138ac6e456d43142a0c6a2353044edcf5342bd8ad6d86492cab98aa8c8",
+    "hash": "00f9acad927d25743497606db5335235307e86e93e6fdd6c4cfff2b9293109e7",
+    "nonce": 240
+  },
+  {
+    "index": 101,
+    "timestamp": 1773948024.970957,
+    "data": {
+      "alert_id": 101,
+      "timestamp": "2026-03-20 00:50:24.963819",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00f9acad927d25743497606db5335235307e86e93e6fdd6c4cfff2b9293109e7",
+    "hash": "00801a6758dccd3c6aa3647410e564dc3cb27f85ebd99cf999b4542b2326741a",
+    "nonce": 162
+  },
+  {
+    "index": 102,
+    "timestamp": 1773948026.379189,
+    "data": {
+      "alert_id": 102,
+      "timestamp": "2026-03-20 00:50:26.372929",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00801a6758dccd3c6aa3647410e564dc3cb27f85ebd99cf999b4542b2326741a",
+    "hash": "00ef9e1b00ead9e595723c1a2835ce5bcdf44c0f516ff9f5bab5be3a75c80839",
+    "nonce": 157
+  },
+  {
+    "index": 103,
+    "timestamp": 1773948029.5488982,
+    "data": {
+      "alert_id": 103,
+      "timestamp": "2026-03-20 00:50:29.532195",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00ef9e1b00ead9e595723c1a2835ce5bcdf44c0f516ff9f5bab5be3a75c80839",
+    "hash": "00b9a585e8d017a9cb86263f1b2b72713a70d6c2811098ee3a4fba0f38f188e9",
+    "nonce": 36
+  },
+  {
+    "index": 104,
+    "timestamp": 1773948030.3570962,
+    "data": {
+      "alert_id": 104,
+      "timestamp": "2026-03-20 00:50:30.349467",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00b9a585e8d017a9cb86263f1b2b72713a70d6c2811098ee3a4fba0f38f188e9",
+    "hash": "00b61cfaab5098a2c87bc84f256f41544ccbb85a0b803d4a0d0d6bb10b9aff95",
+    "nonce": 269
+  },
+  {
+    "index": 105,
+    "timestamp": 1773948030.724243,
+    "data": {
+      "alert_id": 105,
+      "timestamp": "2026-03-20 00:50:30.722134",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00b61cfaab5098a2c87bc84f256f41544ccbb85a0b803d4a0d0d6bb10b9aff95",
+    "hash": "00e9598f43e86bca2dc2f8d02e3fb7290ea381b5cb885b458a6337e946da66de",
+    "nonce": 25
+  },
+  {
+    "index": 106,
+    "timestamp": 1773948030.9372714,
+    "data": {
+      "alert_id": 106,
+      "timestamp": "2026-03-20 00:50:30.930555",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00e9598f43e86bca2dc2f8d02e3fb7290ea381b5cb885b458a6337e946da66de",
+    "hash": "00e54dc1753820cdecfe48849117827010eb3181baf9b09ab9dd01daf9327c96",
+    "nonce": 306
+  },
+  {
+    "index": 107,
+    "timestamp": 1773948031.0914617,
+    "data": {
+      "alert_id": 107,
+      "timestamp": "2026-03-20 00:50:31.085142",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00e54dc1753820cdecfe48849117827010eb3181baf9b09ab9dd01daf9327c96",
+    "hash": "006fc6486e6a66342ede467fb79438aa1c9318a40aff9d5bf0ce2bf182bb099f",
+    "nonce": 195
+  },
+  {
+    "index": 108,
+    "timestamp": 1773948031.2651331,
+    "data": {
+      "alert_id": 108,
+      "timestamp": "2026-03-20 00:50:31.259190",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "006fc6486e6a66342ede467fb79438aa1c9318a40aff9d5bf0ce2bf182bb099f",
+    "hash": "00ca0e16774d1f86afbf8efda495e53dd722029b0de014af5d9eff8aacc5fc9a",
+    "nonce": 179
+  },
+  {
+    "index": 109,
+    "timestamp": 1773948031.44847,
+    "data": {
+      "alert_id": 109,
+      "timestamp": "2026-03-20 00:50:31.441537",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00ca0e16774d1f86afbf8efda495e53dd722029b0de014af5d9eff8aacc5fc9a",
+    "hash": "00eb0119e7df83a8184fe91bbed62fae8686ae687f5a8841ff16cb9799cc8f07",
+    "nonce": 272
+  },
+  {
+    "index": 110,
+    "timestamp": 1773948031.6277318,
+    "data": {
+      "alert_id": 110,
+      "timestamp": "2026-03-20 00:50:31.621624",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00eb0119e7df83a8184fe91bbed62fae8686ae687f5a8841ff16cb9799cc8f07",
+    "hash": "0038089fc05425afc7ea715e42fa2bce936b02f4ed2c3cdcb790d8bd3b0a2ec4",
+    "nonce": 597
+  },
+  {
+    "index": 111,
+    "timestamp": 1773948031.8046927,
+    "data": {
+      "alert_id": 111,
+      "timestamp": "2026-03-20 00:50:31.799620",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0038089fc05425afc7ea715e42fa2bce936b02f4ed2c3cdcb790d8bd3b0a2ec4",
+    "hash": "005a1c996a67915c080e74b7edd35ed63c66b7423765117b7c918edd561a4a71",
+    "nonce": 158
+  },
+  {
+    "index": 112,
+    "timestamp": 1773948031.9894037,
+    "data": {
+      "alert_id": 112,
+      "timestamp": "2026-03-20 00:50:31.982269",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "005a1c996a67915c080e74b7edd35ed63c66b7423765117b7c918edd561a4a71",
+    "hash": "00588b5488d6276d6283920add85bed6b3fb3c4be43ef9e23e7be12ecc931680",
+    "nonce": 407
+  },
+  {
+    "index": 113,
+    "timestamp": 1773948032.1847012,
+    "data": {
+      "alert_id": 113,
+      "timestamp": "2026-03-20 00:50:32.179071",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00588b5488d6276d6283920add85bed6b3fb3c4be43ef9e23e7be12ecc931680",
+    "hash": "001e8b619820acd733458d80038ad6b3ccf2f120e1089ec37cdae3d35dc4bebf",
+    "nonce": 419
+  },
+  {
+    "index": 114,
+    "timestamp": 1773948032.3568776,
+    "data": {
+      "alert_id": 114,
+      "timestamp": "2026-03-20 00:50:32.349659",
+      "source_ip": "10.0.0.5",
+      "destination_ip": "192.168.1.10",
+      "attack_category": "DoS",
+      "confidence": 78.79,
+      "severity": "critical",
+      "top_features": [
+        {
+          "feature": "srv_count",
+          "shap_value": 0.2644757678712252,
+          "impact": "positive"
+        },
+        {
+          "feature": "count",
+          "shap_value": 0.13486751110620945,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "001e8b619820acd733458d80038ad6b3ccf2f120e1089ec37cdae3d35dc4bebf",
+    "hash": "006a41f0087f35b317d77192582db7861490539b5b20bcfcff7c477bfc967085",
+    "nonce": 75
+  },
+  {
+    "index": 115,
+    "timestamp": 1773948033.106927,
+    "data": {
+      "alert_id": 115,
+      "timestamp": "2026-03-20 00:50:33.102432",
+      "source_ip": "172.16.0.1",
+      "destination_ip": "192.168.1.100",
+      "attack_category": "Normal",
+      "confidence": 100.0,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": 0.1127317398010389,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_count",
+          "shap_value": -0.0446280462913559,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "006a41f0087f35b317d77192582db7861490539b5b20bcfcff7c477bfc967085",
+    "hash": "009324c44bdd574ad0459a69cc449b0e5571d37c7f046bacae446ff5b3abc85b",
+    "nonce": 153
+  },
+  {
+    "index": 116,
+    "timestamp": 1773948034.2869928,
+    "data": {
+      "alert_id": 116,
+      "timestamp": "2026-03-20 00:50:34.268391",
+      "source_ip": "10.10.10.2",
+      "destination_ip": "192.168.0.50",
+      "attack_category": "Normal",
+      "confidence": 53.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.13788000265908296,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "srv_serror_rate",
+          "shap_value": 0.05983375631255297,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009324c44bdd574ad0459a69cc449b0e5571d37c7f046bacae446ff5b3abc85b",
+    "hash": "00ac434815c27bae12cdb614841c61cfb3f70e3b73e62ba18f684db5883d33de",
+    "nonce": 96
+  },
+  {
+    "index": 117,
+    "timestamp": 1774107457.9353385,
+    "data": {
+      "alert_id": 117,
+      "timestamp": "2026-03-21 21:07:37.917211",
+      "source_ip": "92.223.76.253",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 62.9,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00ac434815c27bae12cdb614841c61cfb3f70e3b73e62ba18f684db5883d33de",
+    "hash": "003a33218e5b7577e824d1ca0f72524cadfbe9cac342ec507704441647441de0",
+    "nonce": 78
+  },
+  {
+    "index": 118,
+    "timestamp": 1774107460.0943587,
+    "data": {
+      "alert_id": 118,
+      "timestamp": "2026-03-21 21:07:40.075447",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "92.223.76.253",
+      "attack_category": "Normal",
+      "confidence": 67.68,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "003a33218e5b7577e824d1ca0f72524cadfbe9cac342ec507704441647441de0",
+    "hash": "004b4849198e87da6a11af40e78abacca55f41885c432364b41ea5a0e96dff8d",
+    "nonce": 8
+  },
+  {
+    "index": 119,
+    "timestamp": 1774107467.276439,
+    "data": {
+      "alert_id": 119,
+      "timestamp": "2026-03-21 21:07:47.267844",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "92.223.76.253",
+      "attack_category": "Normal",
+      "confidence": 64.56,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004b4849198e87da6a11af40e78abacca55f41885c432364b41ea5a0e96dff8d",
+    "hash": "0041a91d483254f5981748bd2264c63bcb3261984ab7388aa071046eeec6374e",
+    "nonce": 636
+  },
+  {
+    "index": 120,
+    "timestamp": 1774107469.4658082,
+    "data": {
+      "alert_id": 120,
+      "timestamp": "2026-03-21 21:07:49.445645",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "92.223.76.253",
+      "attack_category": "Normal",
+      "confidence": 64.56,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0041a91d483254f5981748bd2264c63bcb3261984ab7388aa071046eeec6374e",
+    "hash": "0012c9bdb415435a4d2a512814c7c98deed02623b3f4843b72d58947015f731a",
+    "nonce": 166
+  },
+  {
+    "index": 121,
+    "timestamp": 1774107471.6483023,
+    "data": {
+      "alert_id": 121,
+      "timestamp": "2026-03-21 21:07:51.645024",
+      "source_ip": "92.223.76.253",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 56.17,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0012c9bdb415435a4d2a512814c7c98deed02623b3f4843b72d58947015f731a",
+    "hash": "00d6843accdd875a497beff3d50b7ad8da86a77ad87a282e33f42a338096e223",
+    "nonce": 256
+  },
+  {
+    "index": 122,
+    "timestamp": 1774107483.8349273,
+    "data": {
+      "alert_id": 122,
+      "timestamp": "2026-03-21 21:08:03.827805",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00d6843accdd875a497beff3d50b7ad8da86a77ad87a282e33f42a338096e223",
+    "hash": "00d965bb60e781e7e805998332b874a36bb96611f6747720126fbcb4639ba816",
+    "nonce": 180
+  },
+  {
+    "index": 123,
+    "timestamp": 1774107486.0141912,
+    "data": {
+      "alert_id": 123,
+      "timestamp": "2026-03-21 21:08:05.996805",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00d965bb60e781e7e805998332b874a36bb96611f6747720126fbcb4639ba816",
+    "hash": "007c6dfc2ef09a63373eee00a245ffb06f7fc07b6316906373f1a3da23338859",
+    "nonce": 24
+  },
+  {
+    "index": 124,
+    "timestamp": 1774107488.1855521,
+    "data": {
+      "alert_id": 124,
+      "timestamp": "2026-03-21 21:08:08.166846",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 88.09,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "007c6dfc2ef09a63373eee00a245ffb06f7fc07b6316906373f1a3da23338859",
+    "hash": "000dfb1a88140af9d3e753232817845738385218739c031fbd0925219092698b",
+    "nonce": 91
+  },
+  {
+    "index": 125,
+    "timestamp": 1774107490.3256383,
+    "data": {
+      "alert_id": 125,
+      "timestamp": "2026-03-21 21:08:10.318549",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 88.35,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "000dfb1a88140af9d3e753232817845738385218739c031fbd0925219092698b",
+    "hash": "00f9b0598f62e369bc8d006317a6f062965e890fd8c6fb78a76feb22559002d1",
+    "nonce": 200
+  },
+  {
+    "index": 126,
+    "timestamp": 1774107492.4863963,
+    "data": {
+      "alert_id": 126,
+      "timestamp": "2026-03-21 21:08:12.470486",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 88.35,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00f9b0598f62e369bc8d006317a6f062965e890fd8c6fb78a76feb22559002d1",
+    "hash": "00a8eb94ad1983dac6ec38b2a81da29fda340249a54164ce7f343bf735e502f7",
+    "nonce": 116
+  },
+  {
+    "index": 127,
+    "timestamp": 1774107494.648492,
+    "data": {
+      "alert_id": 127,
+      "timestamp": "2026-03-21 21:08:14.641844",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 87.5,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00a8eb94ad1983dac6ec38b2a81da29fda340249a54164ce7f343bf735e502f7",
+    "hash": "00abcbf6d77adcd234d1de91b127bd32149a91ffee52702e5ffd57b74172e0b9",
+    "nonce": 21
+  },
+  {
+    "index": 128,
+    "timestamp": 1774107496.7882352,
+    "data": {
+      "alert_id": 128,
+      "timestamp": "2026-03-21 21:08:16.780346",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "83.165.107.130",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00abcbf6d77adcd234d1de91b127bd32149a91ffee52702e5ffd57b74172e0b9",
+    "hash": "007ff24df84c6ab03e2bb01d3dee659b59b39540af946dab4f1d6c7284bebbd5",
+    "nonce": 228
+  },
+  {
+    "index": 129,
+    "timestamp": 1774107498.925605,
+    "data": {
+      "alert_id": 129,
+      "timestamp": "2026-03-21 21:08:18.921011",
+      "source_ip": "104.199.241.202",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 70.18,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "007ff24df84c6ab03e2bb01d3dee659b59b39540af946dab4f1d6c7284bebbd5",
+    "hash": "004598bb7994444863ea5d937b9c4ab5cfef0ba266dd0a3223460f7d33564d1f",
+    "nonce": 159
+  },
+  {
+    "index": 130,
+    "timestamp": 1774107506.1039977,
+    "data": {
+      "alert_id": 130,
+      "timestamp": "2026-03-21 21:08:26.096646",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.20.31.84",
+      "attack_category": "Normal",
+      "confidence": 48.08,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004598bb7994444863ea5d937b9c4ab5cfef0ba266dd0a3223460f7d33564d1f",
+    "hash": "00c78fe03657a5ba98a0d4bab0e50ab2616a8dd198328743c5b3dcdd950bee31",
+    "nonce": 51
+  },
+  {
+    "index": 131,
+    "timestamp": 1774107508.250596,
+    "data": {
+      "alert_id": 131,
+      "timestamp": "2026-03-21 21:08:28.234799",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.20.30.78",
+      "attack_category": "Normal",
+      "confidence": 48.08,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00c78fe03657a5ba98a0d4bab0e50ab2616a8dd198328743c5b3dcdd950bee31",
+    "hash": "0003537cb4f06e624b024d3586c3df92474d1ff499eda8644afdb413bc656117",
+    "nonce": 1253
+  },
+  {
+    "index": 132,
+    "timestamp": 1774107510.4471896,
+    "data": {
+      "alert_id": 132,
+      "timestamp": "2026-03-21 21:08:30.429407",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "51.39.55.42",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0003537cb4f06e624b024d3586c3df92474d1ff499eda8644afdb413bc656117",
+    "hash": "0014f91fcc39c7cd4f691cdea8d1bdb6c1910e2ed918c1f40168c11269acdc26",
+    "nonce": 221
+  },
+  {
+    "index": 133,
+    "timestamp": 1774107512.5926528,
+    "data": {
+      "alert_id": 133,
+      "timestamp": "2026-03-21 21:08:32.586470",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 88.35,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0014f91fcc39c7cd4f691cdea8d1bdb6c1910e2ed918c1f40168c11269acdc26",
+    "hash": "002a99f56288178f64ef846b05b3c6dc7bf01f2ad70b451d07482b2f93ebc52c",
+    "nonce": 101
+  },
+  {
+    "index": 134,
+    "timestamp": 1774107514.7359533,
+    "data": {
+      "alert_id": 134,
+      "timestamp": "2026-03-21 21:08:34.707726",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 88.35,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "002a99f56288178f64ef846b05b3c6dc7bf01f2ad70b451d07482b2f93ebc52c",
+    "hash": "00384d0ce78d000027c3b9fe15c92fae6487d8421a9762a5dbf05be307228756",
+    "nonce": 181
+  },
+  {
+    "index": 135,
+    "timestamp": 1774107516.8752491,
+    "data": {
+      "alert_id": 135,
+      "timestamp": "2026-03-21 21:08:36.875249",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 88.35,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00384d0ce78d000027c3b9fe15c92fae6487d8421a9762a5dbf05be307228756",
+    "hash": "006b4216279ab52708086f349d12acfbeec04aefb922dbd378e4d041b38e1653",
+    "nonce": 11
+  },
+  {
+    "index": 136,
+    "timestamp": 1774107519.0754056,
+    "data": {
+      "alert_id": 136,
+      "timestamp": "2026-03-21 21:08:39.071109",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "181.214.189.11",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "006b4216279ab52708086f349d12acfbeec04aefb922dbd378e4d041b38e1653",
+    "hash": "00f318e67512891c612b4a8c627dfb7d1a89be874c29c3ae0ea32131bc375cdf",
+    "nonce": 20
+  },
+  {
+    "index": 137,
+    "timestamp": 1774107521.2329848,
+    "data": {
+      "alert_id": 137,
+      "timestamp": "2026-03-21 21:08:41.226163",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "83.99.176.240",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00f318e67512891c612b4a8c627dfb7d1a89be874c29c3ae0ea32131bc375cdf",
+    "hash": "0095236cacd22162dcef95824f150cb00b45f47d7dd3899e13c55ff7cd42569d",
+    "nonce": 18
+  },
+  {
+    "index": 138,
+    "timestamp": 1774107523.4013162,
+    "data": {
+      "alert_id": 138,
+      "timestamp": "2026-03-21 21:08:43.375090",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0095236cacd22162dcef95824f150cb00b45f47d7dd3899e13c55ff7cd42569d",
+    "hash": "007b8ca0c3397f03d413de31375dbd0bc3ab5565fc652123f8c2f39da8ad0936",
+    "nonce": 141
+  },
+  {
+    "index": 139,
+    "timestamp": 1774107525.558019,
+    "data": {
+      "alert_id": 139,
+      "timestamp": "2026-03-21 21:08:45.551460",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "007b8ca0c3397f03d413de31375dbd0bc3ab5565fc652123f8c2f39da8ad0936",
+    "hash": "002c27e2fa8bc634a96159db47235f8085805a33f45b1784cb399b3ea636a10b",
+    "nonce": 27
+  },
+  {
+    "index": 140,
+    "timestamp": 1774107527.7333276,
+    "data": {
+      "alert_id": 140,
+      "timestamp": "2026-03-21 21:08:47.725494",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08870929746190061,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "002c27e2fa8bc634a96159db47235f8085805a33f45b1784cb399b3ea636a10b",
+    "hash": "00aaf95ffada30730c9514edbe34384de8fa2c3c2bfcde461f5daabf6275d7d6",
+    "nonce": 22
+  },
+  {
+    "index": 141,
+    "timestamp": 1774107529.867497,
+    "data": {
+      "alert_id": 141,
+      "timestamp": "2026-03-21 21:08:49.862519",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "92.49.135.20",
+      "attack_category": "Normal",
+      "confidence": 67.56,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00aaf95ffada30730c9514edbe34384de8fa2c3c2bfcde461f5daabf6275d7d6",
+    "hash": "00e32be479b35e60ca5a485f693f692152c66f33960d60887a662361c842214f",
+    "nonce": 129
+  },
+  {
+    "index": 142,
+    "timestamp": 1774107532.0063086,
+    "data": {
+      "alert_id": 142,
+      "timestamp": "2026-03-21 21:08:52.002663",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "99.250.75.120",
+      "attack_category": "Normal",
+      "confidence": 82.91,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00e32be479b35e60ca5a485f693f692152c66f33960d60887a662361c842214f",
+    "hash": "00b87f945b6058c57ed1539a6e013749b62fd4042590ff7c53d63cdb335d3a10",
+    "nonce": 107
+  },
+  {
+    "index": 143,
+    "timestamp": 1774107539.1714182,
+    "data": {
+      "alert_id": 143,
+      "timestamp": "2026-03-21 21:08:59.162922",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "75.190.115.154",
+      "attack_category": "Normal",
+      "confidence": 67.56,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00b87f945b6058c57ed1539a6e013749b62fd4042590ff7c53d63cdb335d3a10",
+    "hash": "00c51535db1b1652662b968a02ee37e27b9eb0ce7cd9188c5567904b4c90399d",
+    "nonce": 421
+  },
+  {
+    "index": 144,
+    "timestamp": 1774107541.3188438,
+    "data": {
+      "alert_id": 144,
+      "timestamp": "2026-03-21 21:09:01.311448",
+      "source_ip": "138.199.42.162",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 79.62,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00c51535db1b1652662b968a02ee37e27b9eb0ce7cd9188c5567904b4c90399d",
+    "hash": "0008dab81ad9903a73367c12c270ed06af959b716992672ee2eef62dd7059219",
+    "nonce": 150
+  },
+  {
+    "index": 145,
+    "timestamp": 1774107543.468421,
+    "data": {
+      "alert_id": 145,
+      "timestamp": "2026-03-21 21:09:03.462163",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 87.88,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0008dab81ad9903a73367c12c270ed06af959b716992672ee2eef62dd7059219",
+    "hash": "0059f5285f40d78708a6926e66f63b246a6008b97bdc5a25a3e6ed2154dc4218",
+    "nonce": 240
+  },
+  {
+    "index": 146,
+    "timestamp": 1774107545.60829,
+    "data": {
+      "alert_id": 146,
+      "timestamp": "2026-03-21 21:09:05.601923",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "37.79.130.69",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0059f5285f40d78708a6926e66f63b246a6008b97bdc5a25a3e6ed2154dc4218",
+    "hash": "0068d39a576234a510990a77011f95249b3e58415d119a36a04828ecaffff235",
+    "nonce": 7
+  },
+  {
+    "index": 147,
+    "timestamp": 1774107547.766495,
+    "data": {
+      "alert_id": 147,
+      "timestamp": "2026-03-21 21:09:07.758278",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 87.88,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0068d39a576234a510990a77011f95249b3e58415d119a36a04828ecaffff235",
+    "hash": "004ac6edb7de8439824a89bb54eb79864af32538ae28935d7d2ed257e31dff26",
+    "nonce": 1011
+  },
+  {
+    "index": 148,
+    "timestamp": 1774107549.933604,
+    "data": {
+      "alert_id": 148,
+      "timestamp": "2026-03-21 21:09:09.927429",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "183.100.247.208",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004ac6edb7de8439824a89bb54eb79864af32538ae28935d7d2ed257e31dff26",
+    "hash": "0057153da83b4b168b1b77af3175cca377dec80bb51836151c4940f1ac837aff",
+    "nonce": 180
+  },
+  {
+    "index": 149,
+    "timestamp": 1774107552.0835168,
+    "data": {
+      "alert_id": 149,
+      "timestamp": "2026-03-21 21:09:12.082515",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "98.70.194.74",
+      "attack_category": "Normal",
+      "confidence": 70.64,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0057153da83b4b168b1b77af3175cca377dec80bb51836151c4940f1ac837aff",
+    "hash": "00049e3c5536891c47ac87b1b767dcc779c3c5804ed08852982ffc3d27d575da",
+    "nonce": 210
+  },
+  {
+    "index": 150,
+    "timestamp": 1774107554.2403357,
+    "data": {
+      "alert_id": 150,
+      "timestamp": "2026-03-21 21:09:14.233366",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "52.168.117.175",
+      "attack_category": "Normal",
+      "confidence": 73.23,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00049e3c5536891c47ac87b1b767dcc779c3c5804ed08852982ffc3d27d575da",
+    "hash": "00ae472af2bf570799f036bec31ae65eca5e47b4215a1b4b65fe2829e2fbfb57",
+    "nonce": 21
+  },
+  {
+    "index": 151,
+    "timestamp": 1774107556.3790755,
+    "data": {
+      "alert_id": 151,
+      "timestamp": "2026-03-21 21:09:16.373284",
+      "source_ip": "52.168.117.175",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 73.99,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00ae472af2bf570799f036bec31ae65eca5e47b4215a1b4b65fe2829e2fbfb57",
+    "hash": "0046e00c9775c13fb98989cb7785d7e19013787b2cfdaf7163f440570c4fa392",
+    "nonce": 724
+  },
+  {
+    "index": 152,
+    "timestamp": 1774107558.5422242,
+    "data": {
+      "alert_id": 152,
+      "timestamp": "2026-03-21 21:09:18.534980",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "52.168.117.175",
+      "attack_category": "Normal",
+      "confidence": 59.71,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0046e00c9775c13fb98989cb7785d7e19013787b2cfdaf7163f440570c4fa392",
+    "hash": "00b1484f3ddea0228d02648f556b87d62558013a32177f929572b035ee59df52",
+    "nonce": 31
+  },
+  {
+    "index": 153,
+    "timestamp": 1774107560.689347,
+    "data": {
+      "alert_id": 153,
+      "timestamp": "2026-03-21 21:09:20.684132",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "77.74.132.42",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00b1484f3ddea0228d02648f556b87d62558013a32177f929572b035ee59df52",
+    "hash": "00bd54e84304dbcd85834e58c96275d19dc7063b6dc3633263501f745c0bc3b2",
+    "nonce": 358
+  },
+  {
+    "index": 154,
+    "timestamp": 1774107562.8464332,
+    "data": {
+      "alert_id": 154,
+      "timestamp": "2026-03-21 21:09:22.839412",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "239.255.255.250",
+      "attack_category": "Normal",
+      "confidence": 57.27,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00bd54e84304dbcd85834e58c96275d19dc7063b6dc3633263501f745c0bc3b2",
+    "hash": "008b72e175fb7a39af61c86dc41a36013517061a9556c35f69bacf7a93933ed0",
+    "nonce": 26
+  },
+  {
+    "index": 155,
+    "timestamp": 1774107564.9981625,
+    "data": {
+      "alert_id": 155,
+      "timestamp": "2026-03-21 21:09:24.988921",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 90.81,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "008b72e175fb7a39af61c86dc41a36013517061a9556c35f69bacf7a93933ed0",
+    "hash": "00fe54dadb7887a8d7ca0d6ebd29dd541afa9e4838518eb174f73b54ae567f05",
+    "nonce": 140
+  },
+  {
+    "index": 156,
+    "timestamp": 1774107567.1544611,
+    "data": {
+      "alert_id": 156,
+      "timestamp": "2026-03-21 21:09:27.130323",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.95,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00fe54dadb7887a8d7ca0d6ebd29dd541afa9e4838518eb174f73b54ae567f05",
+    "hash": "00f352e75d92c16d0b1b8594da4f53e8eef386f5151f7237b498e5bc1b014e84",
+    "nonce": 353
+  },
+  {
+    "index": 157,
+    "timestamp": 1774107569.3271995,
+    "data": {
+      "alert_id": 157,
+      "timestamp": "2026-03-21 21:09:29.320767",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.95,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00f352e75d92c16d0b1b8594da4f53e8eef386f5151f7237b498e5bc1b014e84",
+    "hash": "004d3f0c12dc67f335498cb7cec48539ea466252bdba1518a847d29d41f6ca1e",
+    "nonce": 545
+  },
+  {
+    "index": 158,
+    "timestamp": 1774107571.4838777,
+    "data": {
+      "alert_id": 158,
+      "timestamp": "2026-03-21 21:09:31.476320",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "89.65.237.98",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004d3f0c12dc67f335498cb7cec48539ea466252bdba1518a847d29d41f6ca1e",
+    "hash": "0062a1c1dcf9101672ddccbb8ae75d494ae73c000408921b02858e1e01d6cf83",
+    "nonce": 63
+  },
+  {
+    "index": 159,
+    "timestamp": 1774107573.6477134,
+    "data": {
+      "alert_id": 159,
+      "timestamp": "2026-03-21 21:09:33.639222",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "224.0.0.251",
+      "attack_category": "Normal",
+      "confidence": 57.27,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0062a1c1dcf9101672ddccbb8ae75d494ae73c000408921b02858e1e01d6cf83",
+    "hash": "00fc99d7e74ec63e118546730203ed9eb9b055e27a98b454f3f6d0f98598664e",
+    "nonce": 101
+  },
+  {
+    "index": 160,
+    "timestamp": 1774107575.8084106,
+    "data": {
+      "alert_id": 160,
+      "timestamp": "2026-03-21 21:09:35.791300",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "185.162.184.18",
+      "attack_category": "Normal",
+      "confidence": 83.83,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00fc99d7e74ec63e118546730203ed9eb9b055e27a98b454f3f6d0f98598664e",
+    "hash": "00d47d6f1ccac65cb8c442725ebfa20bfd7cd81ce48c79bd076668ce5a1beb5c",
+    "nonce": 271
+  },
+  {
+    "index": 161,
+    "timestamp": 1774107577.9430912,
+    "data": {
+      "alert_id": 161,
+      "timestamp": "2026-03-21 21:09:37.939638",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 85.32,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00d47d6f1ccac65cb8c442725ebfa20bfd7cd81ce48c79bd076668ce5a1beb5c",
+    "hash": "0060d12f610781ec83cdf477a511500b7166ecf191ad4cff89deddcf76f27ba5",
+    "nonce": 550
+  },
+  {
+    "index": 162,
+    "timestamp": 1774107580.1179028,
+    "data": {
+      "alert_id": 162,
+      "timestamp": "2026-03-21 21:09:40.101021",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 90.81,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08790029731225024,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "0060d12f610781ec83cdf477a511500b7166ecf191ad4cff89deddcf76f27ba5",
+    "hash": "003e2a5a6c46945da5094760ad4e449d2cb4407c8ce71be80258080f63fac10f",
+    "nonce": 941
+  },
+  {
+    "index": 163,
+    "timestamp": 1774107587.2841306,
+    "data": {
+      "alert_id": 163,
+      "timestamp": "2026-03-21 21:09:47.266432",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "104.199.241.202",
+      "attack_category": "Normal",
+      "confidence": 75.54,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "003e2a5a6c46945da5094760ad4e449d2cb4407c8ce71be80258080f63fac10f",
+    "hash": "009c2b1d0e6385f285a2ea6cd1286b454c0d1a7263b05005c4f5f2cbccf5b50f",
+    "nonce": 43
+  },
+  {
+    "index": 164,
+    "timestamp": 1774107589.442854,
+    "data": {
+      "alert_id": 164,
+      "timestamp": "2026-03-21 21:09:49.423758",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "123.156.68.224",
+      "attack_category": "Normal",
+      "confidence": 83.83,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "009c2b1d0e6385f285a2ea6cd1286b454c0d1a7263b05005c4f5f2cbccf5b50f",
+    "hash": "005b605b2c1769a2ff7538b0e8ae122736cc9ad50e0a0955409aaa321256675c",
+    "nonce": 38
+  },
+  {
+    "index": 165,
+    "timestamp": 1774107591.5919302,
+    "data": {
+      "alert_id": 165,
+      "timestamp": "2026-03-21 21:09:51.585395",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "72.154.7.109",
+      "attack_category": "Normal",
+      "confidence": 52.98,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "005b605b2c1769a2ff7538b0e8ae122736cc9ad50e0a0955409aaa321256675c",
+    "hash": "0025a86a12313dca60e4b86914b642be164ae2f264c9914b439dffcae65923ab",
+    "nonce": 96
+  },
+  {
+    "index": 166,
+    "timestamp": 1774107593.7619805,
+    "data": {
+      "alert_id": 166,
+      "timestamp": "2026-03-21 21:09:53.746305",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "72.154.7.106",
+      "attack_category": "Normal",
+      "confidence": 52.98,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0025a86a12313dca60e4b86914b642be164ae2f264c9914b439dffcae65923ab",
+    "hash": "006b0c425dbdbb07c5b6c1698a74ccbd31f0564bd626cea6f9814ebd01e491ac",
+    "nonce": 289
+  },
+  {
+    "index": 167,
+    "timestamp": 1774107595.9280605,
+    "data": {
+      "alert_id": 167,
+      "timestamp": "2026-03-21 21:09:55.911858",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "59.7.0.19",
+      "attack_category": "Normal",
+      "confidence": 82.91,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "006b0c425dbdbb07c5b6c1698a74ccbd31f0564bd626cea6f9814ebd01e491ac",
+    "hash": "00e456eff3d066bd147eee545923ca582e894154f1ec3b4bb8156e389240cd23",
+    "nonce": 555
+  },
+  {
+    "index": 168,
+    "timestamp": 1774107598.091822,
+    "data": {
+      "alert_id": 168,
+      "timestamp": "2026-03-21 21:09:58.086691",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "88.201.167.20",
+      "attack_category": "Normal",
+      "confidence": 81.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00e456eff3d066bd147eee545923ca582e894154f1ec3b4bb8156e389240cd23",
+    "hash": "0059d8603932bec8f6f3627145bfeb6e34bd0a913e6ca0febbc2c1ef1be027c3",
+    "nonce": 215
+  },
+  {
+    "index": 169,
+    "timestamp": 1774107600.245365,
+    "data": {
+      "alert_id": 169,
+      "timestamp": "2026-03-21 21:10:00.230522",
+      "source_ip": "98.70.194.74",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 68.61,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0059d8603932bec8f6f3627145bfeb6e34bd0a913e6ca0febbc2c1ef1be027c3",
+    "hash": "0037cd42f0e5d410314dec7349fd2ae7a2b72c9c3e55f644bdc5a10f6d36d1db",
+    "nonce": 41
+  },
+  {
+    "index": 170,
+    "timestamp": 1774107602.4011722,
+    "data": {
+      "alert_id": 170,
+      "timestamp": "2026-03-21 21:10:02.384516",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 86.25,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0037cd42f0e5d410314dec7349fd2ae7a2b72c9c3e55f644bdc5a10f6d36d1db",
+    "hash": "00f28cf477c81947bff947ecf28820c4faec29c0d37ef728bdc569bc99892ff6",
+    "nonce": 354
+  },
+  {
+    "index": 171,
+    "timestamp": 1774107604.5486908,
+    "data": {
+      "alert_id": 171,
+      "timestamp": "2026-03-21 21:10:04.538844",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 86.29,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00f28cf477c81947bff947ecf28820c4faec29c0d37ef728bdc569bc99892ff6",
+    "hash": "008e77207614a31440dc741ca1779a766ac57fe8ed8fce61e8c3bcd01315d262",
+    "nonce": 511
+  },
+  {
+    "index": 172,
+    "timestamp": 1774107606.7155256,
+    "data": {
+      "alert_id": 172,
+      "timestamp": "2026-03-21 21:10:06.709762",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "106.160.171.6",
+      "attack_category": "Normal",
+      "confidence": 83.83,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "008e77207614a31440dc741ca1779a766ac57fe8ed8fce61e8c3bcd01315d262",
+    "hash": "001fbf54d19d0b423f1b586a7d7ffce00ab143b3ca29ec78935a445e235af332",
+    "nonce": 241
+  },
+  {
+    "index": 173,
+    "timestamp": 1774107608.8581908,
+    "data": {
+      "alert_id": 173,
+      "timestamp": "2026-03-21 21:10:08.851465",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "79.165.0.173",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "001fbf54d19d0b423f1b586a7d7ffce00ab143b3ca29ec78935a445e235af332",
+    "hash": "00ab713b84ff8c1b29d31d90b5bc8a7ecdc3389039ea563d1f00e738012887d9",
+    "nonce": 230
+  },
+  {
+    "index": 174,
+    "timestamp": 1774107611.0085068,
+    "data": {
+      "alert_id": 174,
+      "timestamp": "2026-03-21 21:10:11.002331",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 91.16,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00ab713b84ff8c1b29d31d90b5bc8a7ecdc3389039ea563d1f00e738012887d9",
+    "hash": "0034235d8125e9261d00b58b0d67a8d9844fccfb6b064e1cd8f385ac4e4442b3",
+    "nonce": 316
+  },
+  {
+    "index": 175,
+    "timestamp": 1774107613.185579,
+    "data": {
+      "alert_id": 175,
+      "timestamp": "2026-03-21 21:10:13.167442",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 92.01,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0034235d8125e9261d00b58b0d67a8d9844fccfb6b064e1cd8f385ac4e4442b3",
+    "hash": "004502665aba0f66250aee9c41d38aac687b12439aee2996b4c8464a86e96d24",
+    "nonce": 362
+  },
+  {
+    "index": 176,
+    "timestamp": 1774107615.3711917,
+    "data": {
+      "alert_id": 176,
+      "timestamp": "2026-03-21 21:10:15.363748",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "93.100.78.180",
+      "attack_category": "Normal",
+      "confidence": 82.91,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004502665aba0f66250aee9c41d38aac687b12439aee2996b4c8464a86e96d24",
+    "hash": "0015bfc09000f7b4281923b6f4b8a97e192512a0525285d6b90950a636283abc",
+    "nonce": 309
+  },
+  {
+    "index": 177,
+    "timestamp": 1774107617.532015,
+    "data": {
+      "alert_id": 177,
+      "timestamp": "2026-03-21 21:10:17.516836",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 91.82,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0015bfc09000f7b4281923b6f4b8a97e192512a0525285d6b90950a636283abc",
+    "hash": "0066ccae4b141e9ef6793e7eafe7f23fbd146fd18aea65c8d73c2324660b26b0",
+    "nonce": 100
+  },
+  {
+    "index": 178,
+    "timestamp": 1774107619.6893818,
+    "data": {
+      "alert_id": 178,
+      "timestamp": "2026-03-21 21:10:19.681747",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.96,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0066ccae4b141e9ef6793e7eafe7f23fbd146fd18aea65c8d73c2324660b26b0",
+    "hash": "002f4ad7edb7e6d947e1249258069855c77cfe73a2800276a0133d92b71222a8",
+    "nonce": 35
+  },
+  {
+    "index": 179,
+    "timestamp": 1774107621.84939,
+    "data": {
+      "alert_id": 179,
+      "timestamp": "2026-03-21 21:10:21.829769",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.96,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "002f4ad7edb7e6d947e1249258069855c77cfe73a2800276a0133d92b71222a8",
+    "hash": "00b2eadd95ff6cb339d7985e51369639c1e5ebc612c1931cd17e7e92c5ae3988",
+    "nonce": 258
+  },
+  {
+    "index": 180,
+    "timestamp": 1774107624.0304012,
+    "data": {
+      "alert_id": 180,
+      "timestamp": "2026-03-21 21:10:24.027945",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "142.215.167.163",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00b2eadd95ff6cb339d7985e51369639c1e5ebc612c1931cd17e7e92c5ae3988",
+    "hash": "001390ab445b44b9dd07c6f9727b42f2bcf161b076a2d94988a4e1a420f664d9",
+    "nonce": 113
+  },
+  {
+    "index": 181,
+    "timestamp": 1774107626.1818523,
+    "data": {
+      "alert_id": 181,
+      "timestamp": "2026-03-21 21:10:26.164964",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 91.82,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "001390ab445b44b9dd07c6f9727b42f2bcf161b076a2d94988a4e1a420f664d9",
+    "hash": "00e2fd2b5fb913316325891fa827411efcbc794e4c2f60210dea790be601643c",
+    "nonce": 13
+  },
+  {
+    "index": 182,
+    "timestamp": 1774107628.328509,
+    "data": {
+      "alert_id": 182,
+      "timestamp": "2026-03-21 21:10:28.310789",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 91.82,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00e2fd2b5fb913316325891fa827411efcbc794e4c2f60210dea790be601643c",
+    "hash": "0013c526148dcad158991785d92f26241c66734ddea02cc8d2e3b15bd70322b9",
+    "nonce": 58
+  },
+  {
+    "index": 183,
+    "timestamp": 1774107630.4882927,
+    "data": {
+      "alert_id": 183,
+      "timestamp": "2026-03-21 21:10:30.471280",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 91.82,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0013c526148dcad158991785d92f26241c66734ddea02cc8d2e3b15bd70322b9",
+    "hash": "00aee0175b83efdb73d13b9df30bb23cc4e29b9800aec84335851e1ad9ca9ab1",
+    "nonce": 30
+  },
+  {
+    "index": 184,
+    "timestamp": 1774107632.6523936,
+    "data": {
+      "alert_id": 184,
+      "timestamp": "2026-03-21 21:10:32.634730",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "59.12.134.84",
+      "attack_category": "Normal",
+      "confidence": 83.83,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00aee0175b83efdb73d13b9df30bb23cc4e29b9800aec84335851e1ad9ca9ab1",
+    "hash": "00f185de8f4f44593e9d19cf80a6a447d82a18202c7ca1c6c5a43d4ecbc5f19a",
+    "nonce": 37
+  },
+  {
+    "index": 185,
+    "timestamp": 1774107634.7921607,
+    "data": {
+      "alert_id": 185,
+      "timestamp": "2026-03-21 21:10:34.784086",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "84.2.112.163",
+      "attack_category": "Normal",
+      "confidence": 83.83,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00f185de8f4f44593e9d19cf80a6a447d82a18202c7ca1c6c5a43d4ecbc5f19a",
+    "hash": "005051257b958565997ee4362b94e7e24158d045bc44182a37a0ce57b87144fc",
+    "nonce": 113
+  },
+  {
+    "index": 186,
+    "timestamp": 1774107636.931766,
+    "data": {
+      "alert_id": 186,
+      "timestamp": "2026-03-21 21:10:36.925930",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "94.4.93.31",
+      "attack_category": "Normal",
+      "confidence": 83.83,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "005051257b958565997ee4362b94e7e24158d045bc44182a37a0ce57b87144fc",
+    "hash": "00a694fbfb46c625b75becab58c954441c810598171231a37f4626b7c691b0c2",
+    "nonce": 205
+  },
+  {
+    "index": 187,
+    "timestamp": 1774107644.0840259,
+    "data": {
+      "alert_id": 187,
+      "timestamp": "2026-03-21 21:10:44.077116",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "95.66.128.54",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00a694fbfb46c625b75becab58c954441c810598171231a37f4626b7c691b0c2",
+    "hash": "0040fa9097487e58f934d2f9041dcec8faf871c304f9483a014bfe7590f86885",
+    "nonce": 184
+  },
+  {
+    "index": 188,
+    "timestamp": 1774107646.2570038,
+    "data": {
+      "alert_id": 188,
+      "timestamp": "2026-03-21 21:10:46.251153",
+      "source_ip": "104.199.241.202",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 83.86,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.10225053173341793,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0040fa9097487e58f934d2f9041dcec8faf871c304f9483a014bfe7590f86885",
+    "hash": "00a6bdfc16590418bb9c017073b7d9c18be3159dcfa938b60369af39fd6b9e0b",
+    "nonce": 144
+  },
+  {
+    "index": 189,
+    "timestamp": 1774107648.4036787,
+    "data": {
+      "alert_id": 189,
+      "timestamp": "2026-03-21 21:10:48.398273",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "239.255.255.250",
+      "attack_category": "Normal",
+      "confidence": 62.42,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00a6bdfc16590418bb9c017073b7d9c18be3159dcfa938b60369af39fd6b9e0b",
+    "hash": "0076538b40f5199ae219d51508de90660b255a14ce4f727b8bd51d9295f17a0d",
+    "nonce": 458
+  },
+  {
+    "index": 190,
+    "timestamp": 1774107650.57145,
+    "data": {
+      "alert_id": 190,
+      "timestamp": "2026-03-21 21:10:50.565488",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "31.200.233.171",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0076538b40f5199ae219d51508de90660b255a14ce4f727b8bd51d9295f17a0d",
+    "hash": "004b5b8f6361c7363bbf81dca23b42f6b85687d52d01e2662920da90834afc5d",
+    "nonce": 194
+  },
+  {
+    "index": 191,
+    "timestamp": 1774107652.7247245,
+    "data": {
+      "alert_id": 191,
+      "timestamp": "2026-03-21 21:10:52.707845",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "224.0.0.251",
+      "attack_category": "Normal",
+      "confidence": 66.6,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004b5b8f6361c7363bbf81dca23b42f6b85687d52d01e2662920da90834afc5d",
+    "hash": "00ada60b0fa5284ead6315ff0557301bf2d96543d73a79007aeca2cc086ec718",
+    "nonce": 1089
+  },
+  {
+    "index": 192,
+    "timestamp": 1774107654.8704653,
+    "data": {
+      "alert_id": 192,
+      "timestamp": "2026-03-21 21:10:54.862389",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "109.122.197.70",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00ada60b0fa5284ead6315ff0557301bf2d96543d73a79007aeca2cc086ec718",
+    "hash": "00e28e4f639c35e68380dd30752a6f9f47c46c3ab970b020aa6dc7b3bd60c540",
+    "nonce": 79
+  },
+  {
+    "index": 193,
+    "timestamp": 1774107657.050757,
+    "data": {
+      "alert_id": 193,
+      "timestamp": "2026-03-21 21:10:57.030907",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "95.24.212.138",
+      "attack_category": "Normal",
+      "confidence": 67.56,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00e28e4f639c35e68380dd30752a6f9f47c46c3ab970b020aa6dc7b3bd60c540",
+    "hash": "002d3c1149c06c82d31d5c81fb3bbcf913cc0206b16be736bf30b471fdd142fa",
+    "nonce": 321
+  },
+  {
+    "index": 194,
+    "timestamp": 1774107659.2044032,
+    "data": {
+      "alert_id": 194,
+      "timestamp": "2026-03-21 21:10:59.187837",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "183.138.220.37",
+      "attack_category": "Normal",
+      "confidence": 69.22,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "002d3c1149c06c82d31d5c81fb3bbcf913cc0206b16be736bf30b471fdd142fa",
+    "hash": "00e3c06f42a943f1f802375316db55e723a4519db8706d94a1eabd754a386593",
+    "nonce": 8
+  },
+  {
+    "index": 195,
+    "timestamp": 1774107661.370525,
+    "data": {
+      "alert_id": 195,
+      "timestamp": "2026-03-21 21:11:01.353816",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "81.234.71.165",
+      "attack_category": "Normal",
+      "confidence": 82.91,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00e3c06f42a943f1f802375316db55e723a4519db8706d94a1eabd754a386593",
+    "hash": "00da319635e5d5c91aba31c41b780e264155299248039f03de0dcf67faf249a1",
+    "nonce": 455
+  },
+  {
+    "index": 196,
+    "timestamp": 1774107663.528294,
+    "data": {
+      "alert_id": 196,
+      "timestamp": "2026-03-21 21:11:03.520004",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 87.96,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "00da319635e5d5c91aba31c41b780e264155299248039f03de0dcf67faf249a1",
+    "hash": "006a5510a627ce8cb96bbbde4275c3eea4e76329664d52d7e16dad8afd9475a9",
+    "nonce": 4
+  },
+  {
+    "index": 197,
+    "timestamp": 1774107665.6877406,
+    "data": {
+      "alert_id": 197,
+      "timestamp": "2026-03-21 21:11:05.669778",
+      "source_ip": "172.29.104.29",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 80.07,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.10225053173341793,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "006a5510a627ce8cb96bbbde4275c3eea4e76329664d52d7e16dad8afd9475a9",
+    "hash": "00ad5e86ead28bd59b66ae8832310929635e88c821ceced96fc0446ec05636e2",
+    "nonce": 74
+  },
+  {
+    "index": 198,
+    "timestamp": 1774107667.8599315,
+    "data": {
+      "alert_id": 198,
+      "timestamp": "2026-03-21 21:11:07.843541",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "178.140.139.237",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00ad5e86ead28bd59b66ae8832310929635e88c821ceced96fc0446ec05636e2",
+    "hash": "0076709e67db80d296b57c4014a32c1d3ab8ac371a101499b2e3bd6a93f8e0d2",
+    "nonce": 1074
+  },
+  {
+    "index": 199,
+    "timestamp": 1774107670.0338707,
+    "data": {
+      "alert_id": 199,
+      "timestamp": "2026-03-21 21:11:10.017202",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "72.154.7.109",
+      "attack_category": "Normal",
+      "confidence": 63.07,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0076709e67db80d296b57c4014a32c1d3ab8ac371a101499b2e3bd6a93f8e0d2",
+    "hash": "00f7d00a1f59801994a6e75cd2e88815eb4ff653dc1517322478c37f385264c2",
+    "nonce": 207
+  },
+  {
+    "index": 200,
+    "timestamp": 1774107672.1739724,
+    "data": {
+      "alert_id": 200,
+      "timestamp": "2026-03-21 21:11:12.167638",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "72.154.7.106",
+      "attack_category": "Normal",
+      "confidence": 63.07,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00f7d00a1f59801994a6e75cd2e88815eb4ff653dc1517322478c37f385264c2",
+    "hash": "00f96f68f269cd183244cbbfbeb87e100cf9821193daf4dd79dfe8ed8aa865f9",
+    "nonce": 25
+  },
+  {
+    "index": 201,
+    "timestamp": 1774107674.3085876,
+    "data": {
+      "alert_id": 201,
+      "timestamp": "2026-03-21 21:11:14.302382",
+      "source_ip": "72.154.7.106",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 76.2,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.10225053173341793,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00f96f68f269cd183244cbbfbeb87e100cf9821193daf4dd79dfe8ed8aa865f9",
+    "hash": "00a91cd978fa189868bb023d5f6b584d473b21cac15479a4f51f320202049070",
+    "nonce": 93
+  },
+  {
+    "index": 202,
+    "timestamp": 1774107676.471199,
+    "data": {
+      "alert_id": 202,
+      "timestamp": "2026-03-21 21:11:16.465484",
+      "source_ip": "72.154.7.109",
+      "destination_ip": "172.29.104.114",
+      "attack_category": "Normal",
+      "confidence": 76.2,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_diff_host_rate",
+          "shap_value": 0.10225053173341793,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00a91cd978fa189868bb023d5f6b584d473b21cac15479a4f51f320202049070",
+    "hash": "00302038f8090a4f2429060e2f5e7adb8c2b06ee03614405d9477d7683eaf629",
+    "nonce": 125
+  },
+  {
+    "index": 203,
+    "timestamp": 1774107678.6324003,
+    "data": {
+      "alert_id": 203,
+      "timestamp": "2026-03-21 21:11:18.616005",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "193.32.23.18",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00302038f8090a4f2429060e2f5e7adb8c2b06ee03614405d9477d7683eaf629",
+    "hash": "005a50b36b357b61c4d7b2680fc023cd81acd331c4508e07842be99647f0ceaf",
+    "nonce": 274
+  },
+  {
+    "index": 204,
+    "timestamp": 1774107680.7680163,
+    "data": {
+      "alert_id": 204,
+      "timestamp": "2026-03-21 21:11:20.763556",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "71.81.135.157",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "005a50b36b357b61c4d7b2680fc023cd81acd331c4508e07842be99647f0ceaf",
+    "hash": "00306e51d8c2fb3b4a885cd747017bb6ab0d984852eeb61902306383f0f70568",
+    "nonce": 159
+  },
+  {
+    "index": 205,
+    "timestamp": 1774107682.948137,
+    "data": {
+      "alert_id": 205,
+      "timestamp": "2026-03-21 21:11:22.933972",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "84.236.49.109",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00306e51d8c2fb3b4a885cd747017bb6ab0d984852eeb61902306383f0f70568",
+    "hash": "005867beb7046f916339c31be7b3ece500065552f509b92b3b9eba2064dbcc8f",
+    "nonce": 216
+  },
+  {
+    "index": 206,
+    "timestamp": 1774107685.1142216,
+    "data": {
+      "alert_id": 206,
+      "timestamp": "2026-03-21 21:11:25.105778",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.16,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "005867beb7046f916339c31be7b3ece500065552f509b92b3b9eba2064dbcc8f",
+    "hash": "009d5fd2082eeee6c695fcc02fe77e36ed9639952ac300d881fa54afeb67e50c",
+    "nonce": 150
+  },
+  {
+    "index": 207,
+    "timestamp": 1774107687.3064973,
+    "data": {
+      "alert_id": 207,
+      "timestamp": "2026-03-21 21:11:27.288238",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.16,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "009d5fd2082eeee6c695fcc02fe77e36ed9639952ac300d881fa54afeb67e50c",
+    "hash": "007db417e97373baf9aaa58e4af2283025b03b1e191064a6f78369f7f29e9c50",
+    "nonce": 377
+  },
+  {
+    "index": 208,
+    "timestamp": 1774107689.4731767,
+    "data": {
+      "alert_id": 208,
+      "timestamp": "2026-03-21 21:11:29.469210",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 89.16,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09032729776120131,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "007db417e97373baf9aaa58e4af2283025b03b1e191064a6f78369f7f29e9c50",
+    "hash": "00ff521e2ad2ee766e81488b55bf496033259850f4c86e687e1a47425631ca46",
+    "nonce": 45
+  },
+  {
+    "index": 209,
+    "timestamp": 1774107691.7102664,
+    "data": {
+      "alert_id": 209,
+      "timestamp": "2026-03-21 21:11:31.704121",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "193.253.44.220",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00ff521e2ad2ee766e81488b55bf496033259850f4c86e687e1a47425631ca46",
+    "hash": "0086a890d6862fda26618f3ed694b2483ad0f65d5776fe951445dee0947c653f",
+    "nonce": 29
+  },
+  {
+    "index": 210,
+    "timestamp": 1774107698.8719685,
+    "data": {
+      "alert_id": 210,
+      "timestamp": "2026-03-21 21:11:38.865028",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "126.127.14.35",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0086a890d6862fda26618f3ed694b2483ad0f65d5776fe951445dee0947c653f",
+    "hash": "00c5e08aeedfe85fe6c48427e89cff90cc796ba81f7714c4ca86882ef73c6bd9",
+    "nonce": 95
+  },
+  {
+    "index": 211,
+    "timestamp": 1774107701.047291,
+    "data": {
+      "alert_id": 211,
+      "timestamp": "2026-03-21 21:11:41.028002",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 92.53,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00c5e08aeedfe85fe6c48427e89cff90cc796ba81f7714c4ca86882ef73c6bd9",
+    "hash": "009bba1931107616cc755640896272c0856fdff8819c011e7ee1d9a5fe0cf31d",
+    "nonce": 93
+  },
+  {
+    "index": 212,
+    "timestamp": 1774107703.2088206,
+    "data": {
+      "alert_id": 212,
+      "timestamp": "2026-03-21 21:11:43.201344",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 92.53,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "009bba1931107616cc755640896272c0856fdff8819c011e7ee1d9a5fe0cf31d",
+    "hash": "0095c0c09bfad11885385a5896b0c3721ba416f329bca296ceb6daae89e32418",
+    "nonce": 18
+  },
+  {
+    "index": 213,
+    "timestamp": 1774107705.3624113,
+    "data": {
+      "alert_id": 213,
+      "timestamp": "2026-03-21 21:11:45.357560",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 93.19,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0095c0c09bfad11885385a5896b0c3721ba416f329bca296ceb6daae89e32418",
+    "hash": "003cc5117252db84cce655cc8dea85cb9c8bb9555fdff0926429bf4ada483ce2",
+    "nonce": 246
+  },
+  {
+    "index": 214,
+    "timestamp": 1774107707.517501,
+    "data": {
+      "alert_id": 214,
+      "timestamp": "2026-03-21 21:11:47.510271",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 93.19,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "003cc5117252db84cce655cc8dea85cb9c8bb9555fdff0926429bf4ada483ce2",
+    "hash": "0050294d77c6b08229fba9ae39383891bf5f0d58963f603bc57c2a35bc9a1205",
+    "nonce": 80
+  },
+  {
+    "index": 215,
+    "timestamp": 1774107709.6647577,
+    "data": {
+      "alert_id": 215,
+      "timestamp": "2026-03-21 21:11:49.657457",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 94.04,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0050294d77c6b08229fba9ae39383891bf5f0d58963f603bc57c2a35bc9a1205",
+    "hash": "005fad71c8656036e5be5e42b958cbe18efce2edf96dd0577da536a1702f982d",
+    "nonce": 93
+  },
+  {
+    "index": 216,
+    "timestamp": 1774107711.8131866,
+    "data": {
+      "alert_id": 216,
+      "timestamp": "2026-03-21 21:11:51.806419",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "239.255.255.250",
+      "attack_category": "Normal",
+      "confidence": 75.21,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.09194529806050204,
+          "impact": "negative"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        }
+      ]
+    },
+    "previous_hash": "005fad71c8656036e5be5e42b958cbe18efce2edf96dd0577da536a1702f982d",
+    "hash": "00e77b2554035dee06ff2326e83d5b46f19adada380f4e5dce5490038711ebf2",
+    "nonce": 162
+  },
+  {
+    "index": 217,
+    "timestamp": 1774107713.9812016,
+    "data": {
+      "alert_id": 217,
+      "timestamp": "2026-03-21 21:11:53.980281",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 90.11,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.08223729626469774,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00e77b2554035dee06ff2326e83d5b46f19adada380f4e5dce5490038711ebf2",
+    "hash": "004e276b4dcb1cca479d440221aeb0ab91c32f6f546b1cd8cd3904cf68856367",
+    "nonce": 492
+  },
+  {
+    "index": 218,
+    "timestamp": 1774107716.185077,
+    "data": {
+      "alert_id": 218,
+      "timestamp": "2026-03-21 21:11:56.169205",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "224.0.0.251",
+      "attack_category": "Normal",
+      "confidence": 55.78,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "004e276b4dcb1cca479d440221aeb0ab91c32f6f546b1cd8cd3904cf68856367",
+    "hash": "0002d516be1ebc0b9785160345484bd216addb02193dff6453107b802758134b",
+    "nonce": 29
+  },
+  {
+    "index": 219,
+    "timestamp": 1774107718.3761754,
+    "data": {
+      "alert_id": 219,
+      "timestamp": "2026-03-21 21:11:58.372581",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "84.39.247.227",
+      "attack_category": "Normal",
+      "confidence": 80.97,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0002d516be1ebc0b9785160345484bd216addb02193dff6453107b802758134b",
+    "hash": "0031cbb7bd47425b51c4c18e77282516c0e610b8477646ae90477ad6f9d6f9d4",
+    "nonce": 151
+  },
+  {
+    "index": 220,
+    "timestamp": 1774107720.5713315,
+    "data": {
+      "alert_id": 220,
+      "timestamp": "2026-03-21 21:12:00.550276",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "104.199.241.202",
+      "attack_category": "Normal",
+      "confidence": 75.54,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "dst_host_same_src_port_rate",
+          "shap_value": 0.1102430097093492,
+          "impact": "positive"
+        },
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "dst_host_srv_count",
+          "shap_value": -0.0927542982101524,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "0031cbb7bd47425b51c4c18e77282516c0e610b8477646ae90477ad6f9d6f9d4",
+    "hash": "00222202b2cf7601c00f223b77abe3f6bddcf485bb8fc8a47e2270d8cd434728",
+    "nonce": 990
+  },
+  {
+    "index": 221,
+    "timestamp": 1774107722.777281,
+    "data": {
+      "alert_id": 221,
+      "timestamp": "2026-03-21 21:12:02.762244",
+      "source_ip": "172.29.104.114",
+      "destination_ip": "172.29.104.29",
+      "attack_category": "Normal",
+      "confidence": 93.19,
+      "severity": "info",
+      "top_features": [
+        {
+          "feature": "diff_srv_rate",
+          "shap_value": 0.10849218121840497,
+          "impact": "positive"
+        },
+        {
+          "feature": "logged_in",
+          "shap_value": 0.08671812219134536,
+          "impact": "positive"
+        },
+        {
+          "feature": "service",
+          "shap_value": -0.0863084570476314,
+          "impact": "negative"
+        }
+      ]
+    },
+    "previous_hash": "00222202b2cf7601c00f223b77abe3f6bddcf485bb8fc8a47e2270d8cd434728",
+    "hash": "00ac696b03b08bd4d6b5e6a5ef9937ecc99b4f4a42ae92b26fe8fe6bdae27124",
+    "nonce": 117
   }
 ]

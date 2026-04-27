@@ -7,6 +7,7 @@ Loads the trained Random Forest model and provides:
 
 import os
 import pickle
+import shap
 import numpy as np
 import pandas as pd
 from pathlib import Path
@@ -30,31 +31,37 @@ CATEGORICAL_COLS = ['protocol_type', 'service', 'flag']
 
 ATTACK_SEVERITY = {
     'Normal': 'info',
-    'DoS': 'critical',
-    'Probe': 'warning',
-    'R2L': 'high',
-    'U2R': 'critical',
+    'DoS':    'critical',
+    'Probe':  'warning',
+    'R2L':    'high',
+    'U2R':    'critical',
 }
 
 ATTACK_DESCRIPTIONS = {
     'Normal': 'This traffic appears to be legitimate network activity.',
-    'DoS': 'Denial-of-Service attack detected. Attacker is flooding the network to exhaust resources.',
-    'Probe': 'Probe/Scan attack detected. Attacker is surveilling the network to gather information.',
-    'R2L': 'Remote-to-Local attack detected. Attacker is trying to gain local access from a remote machine.',
-    'U2R': 'User-to-Root attack detected. Attacker is exploiting vulnerabilities to gain root/admin access.',
+    'DoS':    'Denial-of-Service attack detected. Attacker is flooding the network to exhaust resources.',
+    'Probe':  'Probe/Scan attack detected. Attacker is surveilling the network to gather information.',
+    'R2L':    'Remote-to-Local attack detected. Attacker is trying to gain local access from a remote machine.',
+    'U2R':    'User-to-Root attack detected. Attacker is exploiting vulnerabilities to gain root/admin access.',
 }
+
+# ── Minority class threshold config ───────────────────────────────────────────
+UNCERTAINTY_THRESHOLD = 0.60
+MINORITY_THRESHOLD    = 0.15
+MINORITY_CLASSES      = ['R2L', 'U2R']
+# ──────────────────────────────────────────────────────────────────────────────
 
 
 class IDSPredictor:
     _instance = None
 
     def __init__(self):
-        self.model = None
-        self.scaler = None
+        self.model          = None
+        self.scaler         = None
         self.label_encoders = None
-        self.feature_cols = None
-        self.explainer = None
-        self._loaded = False
+        self.feature_cols   = None
+        self.explainer      = None   # SHAP explainer cached here
+        self._loaded        = False
 
     @classmethod
     def get_instance(cls):
@@ -74,6 +81,10 @@ class IDSPredictor:
                 self.label_encoders = pickle.load(f)
             with open(MODEL_DIR / 'feature_cols.pkl', 'rb') as f:
                 self.feature_cols = pickle.load(f)
+
+            # Build SHAP explainer once at load time — reused for every prediction
+            self.explainer = shap.TreeExplainer(self.model)
+
             self._loaded = True
             return True
         except FileNotFoundError:
@@ -81,14 +92,14 @@ class IDSPredictor:
 
     def _encode_record(self, record: dict) -> np.ndarray:
         df = pd.DataFrame([record])
-        # Ensure all feature columns exist
+
         for col in FEATURE_NAMES:
             if col not in df.columns:
                 df[col] = 0
         df = df[FEATURE_NAMES]
 
         for col in CATEGORICAL_COLS:
-            le = self.label_encoders[col]
+            le  = self.label_encoders[col]
             val = str(df[col].iloc[0])
             df[col] = le.transform([val])[0] if val in le.classes_ else -1
 
@@ -102,39 +113,69 @@ class IDSPredictor:
 
         X = self._encode_record(record)
 
-        prediction = self.model.predict(X)[0]
+        # ── Raw model output ───────────────────────────────────────────────────
+        prediction    = self.model.predict(X)[0]
         probabilities = self.model.predict_proba(X)[0]
-        classes = self.model.classes_
-        prob_dict = {cls: float(round(prob * 100, 2)) for cls, prob in zip(classes, probabilities)}
-        confidence = float(round(max(probabilities) * 100, 2))
+        classes       = list(self.model.classes_)
 
-        # SHAP explanation
+        # ── Minority class threshold override ──────────────────────────────────
+        max_prob = float(max(probabilities))
+
+        if max_prob < UNCERTAINTY_THRESHOLD:
+            for minority_class in MINORITY_CLASSES:
+                if minority_class in classes:
+                    idx           = classes.index(minority_class)
+                    minority_prob = float(probabilities[idx])
+                    if minority_prob > MINORITY_THRESHOLD:
+                        prediction = minority_class
+                        break
+        # ──────────────────────────────────────────────────────────────────────
+
+        prob_dict  = {cls: float(round(prob * 100, 2)) for cls, prob in zip(classes, probabilities)}
+        confidence = float(round(max_prob * 100, 2))
+
+        # ── Real SHAP explanation ──────────────────────────────────────────────
         shap_values = self._get_shap(X, prediction, classes)
 
         return {
-            'prediction': prediction,
-            'confidence': confidence,
-            'probabilities': prob_dict,
-            'severity': ATTACK_SEVERITY.get(prediction, 'info'),
-            'description': ATTACK_DESCRIPTIONS.get(prediction, ''),
+            'prediction':       prediction,
+            'confidence':       confidence,
+            'probabilities':    prob_dict,
+            'severity':         ATTACK_SEVERITY.get(prediction, 'info'),
+            'description':      ATTACK_DESCRIPTIONS.get(prediction, ''),
             'shap_explanation': shap_values,
-            'top_features': self._top_features(shap_values),
+            'top_features':     self._top_features(shap_values),
         }
 
     def _get_shap(self, X, prediction, classes) -> dict:
-        # Always use feature importances * input as SHAP proxy (fast & reliable)
-        importances = self.model.feature_importances_
-        vals = (importances * X[0]).flatten()
+        shap_values = self.explainer.shap_values(X)
+        class_index = classes.index(prediction)
+
+    # Handle both old SHAP (list) and new SHAP (3D numpy array)
+        if isinstance(shap_values, list):
+        # Old SHAP — list of arrays, one per class
+            vals = shap_values[class_index][0]
+        elif hasattr(shap_values, 'ndim') and shap_values.ndim == 3:
+        # New SHAP — shape is (n_samples, n_features, n_classes)
+            vals = shap_values[0, :, class_index]
+        else:
+        # Fallback — binary or single output
+             vals = shap_values[0]
+
         explanation = {
             col: float(val)
             for col, val in zip(self.feature_cols, vals)
-        }
+    }
         return explanation
 
-    def _top_features(self, shap_dict: dict, n=10) -> list:
+    def _top_features(self, shap_dict: dict, n: int = 10) -> list:
         sorted_feats = sorted(shap_dict.items(), key=lambda x: abs(x[1]), reverse=True)
         return [
-            {'feature': k, 'shap_value': v, 'impact': 'positive' if v > 0 else 'negative'}
+            {
+                'feature':    k,
+                'shap_value': v,
+                'impact':     'positive' if v > 0 else 'negative'
+            }
             for k, v in sorted_feats[:n]
         ]
 

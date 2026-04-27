@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import Dashboard   from './pages/Dashboard';
-import LiveMonitor from './pages/LiveMonitor';
-import Alerts      from './pages/Alerts';
-import AlertDetail from './pages/AlertDetail';
-import Predict     from './pages/Predict';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-dom';
+import Dashboard     from './pages/Dashboard';
+import LiveMonitor   from './pages/LiveMonitor';
+import Alerts        from './pages/Alerts';
+import AlertDetail   from './pages/AlertDetail';
+import Predict       from './pages/Predict';
 import BlockchainPage from './pages/BlockchainPage';
+import Login         from './pages/Login';
+import { authStatus, logoutUser } from './services/api';
 import {
-  LayoutDashboard, ShieldAlert, Brain, Link2, Menu, X, Shield, Activity
+  LayoutDashboard, ShieldAlert, Brain, Link2,
+  Menu, X, Shield, Activity, LogOut
 } from 'lucide-react';
 import './App.css';
 
@@ -20,7 +23,42 @@ const NAV = [
 ];
 
 export default function App() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen]       = useState(true);
+  const [user, setUser]       = useState(null);
+  const [checking, setCheck]  = useState(true);
+
+  useEffect(() => {
+    authStatus()
+      .then(({ data }) => {
+        if (data.authenticated) setUser(data.username);
+      })
+      .catch(() => {})
+      .finally(() => setCheck(false));
+  }, []);
+
+  const handleLogout = async () => {
+    await logoutUser();
+    setUser(null);
+  };
+
+  if (checking) {
+    return (
+      <div className="loading">
+        <div className="spinner"/>
+        <span>Loading...</span>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Login onLogin={setUser} />} />
+        </Routes>
+      </BrowserRouter>
+    );
+  }
 
   return (
     <BrowserRouter>
@@ -55,7 +93,16 @@ export default function App() {
                 <span className="dot green" />
                 <span>System Online</span>
               </div>
-              <p className="footer-sub">NSL-KDD · Random Forest · SHAP</p>
+              <p className="footer-sub" style={{ marginBottom: 10 }}>
+                Logged in as <strong>{user}</strong>
+              </p>
+              <button
+                className="btn btn-danger"
+                style={{ width: '100%', justifyContent: 'center', fontSize: 12 }}
+                onClick={handleLogout}
+              >
+                <LogOut size={13}/> Logout
+              </button>
             </div>
           )}
         </aside>
@@ -69,6 +116,7 @@ export default function App() {
             <Route path="/alerts/:id"  element={<AlertDetail />} />
             <Route path="/predict"     element={<Predict />} />
             <Route path="/blockchain"  element={<BlockchainPage />} />
+            <Route path="*"            element={<Navigate to="/" />} />
           </Routes>
         </main>
       </div>

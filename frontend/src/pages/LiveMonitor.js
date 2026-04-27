@@ -59,7 +59,7 @@ export default function LiveMonitor() {
             Live Monitor
           </h1>
           <p className="page-sub">
-            Real-time network traffic analysis · Auto-refreshes every 3s
+            
           </p>
         </div>
         <div style={{display:'flex',alignItems:'center',gap:8,

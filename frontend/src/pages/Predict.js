@@ -22,7 +22,8 @@ const DEFAULTS = {
 
 const PRESETS = {
   'Normal HTTP': DEFAULTS,
-  'Neptune (DoS)': {
+
+  ' DoS': {
     ...DEFAULTS, protocol_type:'tcp', service:'private', flag:'S0',
     src_bytes:0, dst_bytes:0, logged_in:0, count:511, srv_count:511,
     serror_rate:1.0, srv_serror_rate:1.0, same_srv_rate:1.0,
@@ -30,30 +31,106 @@ const PRESETS = {
     dst_host_serror_rate:1.0, dst_host_srv_serror_rate:1.0,
     source_ip:'10.0.0.5', destination_ip:'192.168.1.10',
   },
-  'Portsweep (Probe)': {
-    ...DEFAULTS, protocol_type:'tcp', service:'finger', flag:'S0',
-    src_bytes:0, dst_bytes:0, logged_in:0, count:1, srv_count:1,
-    serror_rate:1.0, srv_diff_host_rate:1.0, dst_host_count:255, dst_host_srv_count:4,
-    dst_host_same_srv_rate:0.02, dst_host_rerror_rate:0.5, dst_host_srv_rerror_rate:1.0,
+
+  // FIXED — added all missing probe signals
+  ' Probe': {
+    ...DEFAULTS,
+    protocol_type:'tcp', service:'finger', flag:'S0',
+    src_bytes:0, dst_bytes:0, logged_in:0,
+    count:1, srv_count:1,
+    serror_rate:0.0, srv_serror_rate:0.0,
+    rerror_rate:1.0, srv_rerror_rate:1.0,
+    same_srv_rate:0.02, diff_srv_rate:0.98,       // ← KEY FIX
+    srv_diff_host_rate:1.0,
+    dst_host_count:255, dst_host_srv_count:4,
+    dst_host_same_srv_rate:0.02,
+    dst_host_diff_srv_rate:0.98,                  // ← KEY FIX
+    dst_host_same_src_port_rate:0.0,
+    dst_host_srv_diff_host_rate:1.0,              // ← KEY FIX
+    dst_host_serror_rate:0.0,
+    dst_host_rerror_rate:0.5, dst_host_srv_rerror_rate:1.0,
     source_ip:'10.10.10.2', destination_ip:'192.168.0.50',
+  },
+
+  // NEW — R2L: FTP Brute Force (Guess Password)
+  'R2L': {
+    ...DEFAULTS,
+    protocol_type:'tcp', service:'ftp', flag:'SF',
+    duration:299, src_bytes:1512, dst_bytes:2368,
+    logged_in:0, hot:2,
+    num_failed_logins:9,                          // ← KEY R2L signal
+    num_compromised:3, num_file_creations:2,
+    num_access_files:2,
+    is_guest_login:1,                             // ← KEY R2L signal
+    count:2, srv_count:2,
+    serror_rate:0.0, srv_serror_rate:0.0,
+    rerror_rate:1.0, srv_rerror_rate:1.0,
+    same_srv_rate:1.0, diff_srv_rate:0.0,
+    dst_host_count:2, dst_host_srv_count:2,
+    dst_host_same_srv_rate:1.0,
+    dst_host_same_src_port_rate:1.0,
+    dst_host_rerror_rate:1.0, dst_host_srv_rerror_rate:1.0,
+    source_ip:'192.168.5.20', destination_ip:'192.168.1.25',
+  },
+
+  // NEW — U2R: Buffer Overflow (Privilege Escalation)
+  ' U2R': {
+    ...DEFAULTS,
+    protocol_type:'tcp', service:'telnet', flag:'SF',
+    duration:0, src_bytes:1274, dst_bytes:1837,
+    logged_in:1, hot:4,
+    num_failed_logins:0,
+    num_compromised:1,
+    root_shell:1,                                 // ← KEY U2R signal
+    su_attempted:1,                               // ← KEY U2R signal
+    num_root:1,                                   // ← KEY U2R signal
+    num_shells:2,                                 // ← KEY U2R signal
+    num_access_files:1,
+    is_guest_login:0,
+    count:1, srv_count:1,
+    serror_rate:0.0, srv_serror_rate:0.0,
+    rerror_rate:0.0, srv_rerror_rate:0.0,
+    same_srv_rate:1.0, diff_srv_rate:0.0,
+    dst_host_count:1, dst_host_srv_count:1,
+    dst_host_same_srv_rate:1.0,
+    dst_host_same_src_port_rate:1.0,
+    source_ip:'192.168.10.5', destination_ip:'192.168.1.1',
   },
 };
 
 const FIELDS_BASIC = [
-  {key:'source_ip',      label:'Source IP',          type:'text'},
-  {key:'destination_ip', label:'Destination IP',      type:'text'},
-  {key:'protocol_type',  label:'Protocol',            type:'select', opts:['tcp','udp','icmp']},
-  {key:'service',        label:'Service',             type:'text'},
-  {key:'flag',           label:'Flag',                type:'select', opts:['SF','S0','S1','REJ','RSTO','SH','OTH']},
-  {key:'duration',       label:'Duration (s)',         type:'number'},
-  {key:'src_bytes',      label:'Src Bytes',           type:'number'},
-  {key:'dst_bytes',      label:'Dst Bytes',           type:'number'},
-  {key:'logged_in',      label:'Logged In',           type:'select', opts:['0','1']},
-  {key:'count',          label:'Count',               type:'number'},
-  {key:'srv_count',      label:'Srv Count',           type:'number'},
-  {key:'serror_rate',    label:'SYN Error Rate',      type:'number'},
-  {key:'rerror_rate',    label:'REJ Error Rate',      type:'number'},
-  {key:'same_srv_rate',  label:'Same Srv Rate',       type:'number'},
+  {key:'source_ip',               label:'Source IP',              type:'text'},
+  {key:'destination_ip',          label:'Destination IP',         type:'text'},
+  {key:'protocol_type',           label:'Protocol',               type:'select', opts:['tcp','udp','icmp']},
+  {key:'service',                 label:'Service',                type:'text'},
+  {key:'flag',                    label:'Flag',                   type:'select', opts:['SF','S0','S1','REJ','RSTO','SH','OTH']},
+  {key:'duration',                label:'Duration (s)',           type:'number'},
+  {key:'src_bytes',               label:'Src Bytes',              type:'number'},
+  {key:'dst_bytes',               label:'Dst Bytes',              type:'number'},
+  {key:'logged_in',               label:'Logged In',              type:'select', opts:['0','1']},
+  {key:'count',                   label:'Count',                  type:'number'},
+  {key:'srv_count',               label:'Srv Count',              type:'number'},
+  {key:'serror_rate',             label:'SYN Error Rate',         type:'number'},
+  {key:'rerror_rate',             label:'REJ Error Rate',         type:'number'},
+  {key:'same_srv_rate',           label:'Same Srv Rate',          type:'number'},
+  // ── Fields added for Probe fix ──
+  {key:'diff_srv_rate',           label:'Diff Srv Rate',          type:'number'},
+  {key:'srv_diff_host_rate',      label:'Srv Diff Host Rate',     type:'number'},
+  {key:'dst_host_count',          label:'Dst Host Count',         type:'number'},
+  {key:'dst_host_srv_count',      label:'Dst Host Srv Count',     type:'number'},
+  {key:'dst_host_diff_srv_rate',  label:'Dst Host Diff Srv Rate', type:'number'},
+  // ── Fields added for R2L ──
+  {key:'num_failed_logins',       label:'Failed Logins',          type:'number'},
+  {key:'is_guest_login',          label:'Guest Login',            type:'select', opts:['0','1']},
+  {key:'num_file_creations',      label:'File Creations',         type:'number'},
+  {key:'num_access_files',        label:'Access Files',           type:'number'},
+  // ── Fields added for U2R ──
+  {key:'root_shell',              label:'Root Shell',             type:'select', opts:['0','1']},
+  {key:'su_attempted',            label:'SU Attempted',           type:'select', opts:['0','1']},
+  {key:'num_root',                label:'Num Root',               type:'number'},
+  {key:'num_shells',              label:'Num Shells',             type:'number'},
+  {key:'num_compromised',         label:'Num Compromised',        type:'number'},
+  {key:'hot',                     label:'Hot Indicators',         type:'number'},
 ];
 
 export default function Predict() {
@@ -83,7 +160,7 @@ export default function Predict() {
     <div className="page">
       <div className="page-header">
         <h1 className="page-title">Manual Prediction</h1>
-        <p className="page-sub">Enter network traffic features to get an instant AI-powered classification with SHAP explanation.</p>
+        <p className="page-sub"></p>
       </div>
 
       {/* Presets */}
@@ -194,10 +271,10 @@ export default function Predict() {
             border:'2px dashed var(--border)'}}>
             <Brain size={40} color="var(--text-muted)" strokeWidth={1}/>
             <p style={{color:'var(--text-muted)',fontSize:14,textAlign:'center'}}>
-              Fill in the network features and click<br/><strong>Run Prediction + SHAP</strong>
+              <br/><strong></strong>
             </p>
             <p style={{color:'var(--text-muted)',fontSize:12,textAlign:'center'}}>
-              Or use a preset above to auto-fill known attack patterns
+             
             </p>
           </div>
         )}

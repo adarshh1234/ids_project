@@ -1,14 +1,20 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: '/api' });
+const API = axios.create({
+  baseURL: '/api',
+  withCredentials: true,
+});
 
-export const fetchStats      = ()        => API.get('/stats/');
-export const fetchAlerts     = (params)  => API.get('/alerts/', { params });
-export const fetchAlert      = (id)      => API.get(`/alerts/${id}/`);
-export const updateStatus    = (id, s)   => API.patch(`/alerts/${id}/status/`, { status: s });
-export const predict         = (data)    => API.post('/predict/', data);
-export const simulate        = ()        => API.post('/simulate/');
-export const fetchBlockchain = ()        => API.get('/blockchain/');
-export const verifyChain     = ()        => API.get('/blockchain/verify/');
+export const loginUser    = (data)   => API.post('/auth/login/', data);
+export const logoutUser   = ()       => API.post('/auth/logout/');
+export const authStatus   = ()       => API.get('/auth/status/');
+export const fetchStats      = ()       => API.get('/stats/');
+export const fetchAlerts     = (params) => API.get('/alerts/', { params });
+export const fetchAlert      = (id)     => API.get(`/alerts/${id}/`);
+export const updateStatus    = (id, s)  => API.patch(`/alerts/${id}/status/`, { status: s });
+export const predict         = (data)   => API.post('/predict/', data);
+export const simulate        = (type)   => API.post('/simulate/', type ? { attack_type: type } : {});
+export const fetchBlockchain = ()       => API.get('/blockchain/');
+export const verifyChain     = ()       => API.get('/blockchain/verify/');
 
 export default API;
