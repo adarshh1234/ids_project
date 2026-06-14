@@ -15,6 +15,7 @@ class AlertSerializer(serializers.ModelSerializer):
             'attack_type', 'attack_category', 'confidence', 'severity',
             'status', 'description', 'raw_features', 'shap_explanation',
             'top_features', 'probabilities',
+            'anomaly_score', 'is_unknown_attack', 'detection_method', 'rf_prediction',
             'blockchain_block_index', 'blockchain_hash',
         ]
 

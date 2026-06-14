@@ -5,7 +5,7 @@ import { Activity, Wifi, WifiOff, AlertTriangle, CheckCircle, Zap } from 'lucide
 
 const API = axios.create({ baseURL: '/api' });
 const SEV_COLOR = { critical:'#f85149', high:'#ff9500', warning:'#e3b341', info:'#3fb950' };
-const CAT_COLOR = { Normal:'#3fb950', DoS:'#f85149', Probe:'#bc8cff', R2L:'#ff9500', U2R:'#e3b341' };
+const CAT_COLOR = { Normal:'#3fb950', DoS:'#f85149', Probe:'#bc8cff', R2L:'#ff9500', U2R:'#e3b341', Unknown:'#ff6b6b' };
 
 export default function LiveMonitor() {
   const [alerts, setAlerts]       = useState([]);
@@ -89,12 +89,14 @@ export default function LiveMonitor() {
           <p style={{fontSize:12,color:'var(--text-muted)',fontFamily:'monospace'}}>
             cd ids_project/network_capture<br/>
             pip install scapy requests<br/>
-            sudo python capture.py --iface eth0 --api http://localhost:8000
+            python wifi_helper.py --detect<br/>
+            python capture.py --iface "Wi-Fi" --api http://localhost:8000<br/>
+            python wifi_helper.py --capture-normal --duration 60
           </p>
           <p style={{fontSize:11,color:'var(--text-muted)',marginTop:6}}>
-            Replace <code style={{color:'#e3b341'}}>eth0</code> with your interface
-            (run <code style={{color:'#e3b341'}}>python capture.py --list</code> to see options).
-            Requires root/admin privileges for raw packet access.
+            Run <code style={{color:'#e3b341'}}>python wifi_helper.py --list</code> to see interfaces.
+            Use <code style={{color:'#e3b341'}}>python attack_simulator.py all</code> for multi-attack testing.
+            Requires Administrator for raw packet access on Windows.
           </p>
         </div>
       </div>

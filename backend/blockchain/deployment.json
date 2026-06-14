@@ -1,5 +1,5 @@
 {
-  "contract_address": "0x38E754A469a10cd7dF6C2e1Be835839F27aF9983",
+  "contract_address": "0x248e5f3C07814A805c42De9084f2B767fF99Ba3b",
   "abi": [
     {
       "inputs": [],
@@ -302,8 +302,8 @@
       "type": "function"
     }
   ],
-  "tx_hash": "fdb40ef7b963a6ed3b04b3a2cc6060f7e85b824a9023dced128c5f97ad088fc4",
-  "deployed_at": 1775410798.769927,
+  "tx_hash": "43171a3e5816a85fc5f65dc9acc82d8220bc9f5c81f7444c277e1a7f7fa796e4",
+  "deployed_at": 1781362052.5115538,
   "network": "Ganache (localhost:7545)",
-  "deployer": "0xCE7F0CbA26B7e43388678d092E812ccD00A0807b"
+  "deployer": "0x8A9F769b5612E651D6AA4da7e115255e55F9A5A1"
 }

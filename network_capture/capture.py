@@ -341,12 +341,15 @@ class FlowManager:
                     sev  = result.get('severity', 'info')
                     if pred != 'Normal':
                         self.stats['attacks_detected'] += 1
+                        unknown = result.get('is_unknown_attack', False)
+                        tag = 'UNKNOWN' if unknown else pred
                         log.warning(
-                            f"🚨 ATTACK [{sev.upper()}] {pred} | "
+                            f"🚨 ATTACK [{sev.upper()}] {tag} | "
                             f"{flow.key.src_ip}:{flow.key.src_port} → "
                             f"{flow.key.dst_ip}:{flow.key.dst_port} | "
                             f"Confidence: {conf}% | "
-                            f"Block #{result.get('blockchain', {}).get('block_number', '?')}"
+                            f"Anomaly: {result.get('anomaly_score', 'N/A')} | "
+                            f"Method: {result.get('detection_method', '?')}"
                         )
                     else:
                         log.info(

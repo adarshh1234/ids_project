@@ -117,6 +117,16 @@ ATTACK_MAP = {
     'u2r':   ('U2R  (Buffer overflow)', U2R_BASE),
 }
 
+# Import novel/unknown attack patterns
+try:
+    from novel_attacks import NOVEL_ATTACKS, NORMAL_TRAFFIC
+    for key, (label, fn) in NOVEL_ATTACKS.items():
+        ATTACK_MAP[f'novel_{key}'] = (label, fn)
+    for key, (label, fn) in NORMAL_TRAFFIC.items():
+        ATTACK_MAP[f'normal_{key}'] = (label, fn)
+except ImportError:
+    pass
+
 # ── Injector ──────────────────────────────────────────────────────────────────
 
 def randomise_ips(base: dict) -> dict:
@@ -128,12 +138,19 @@ def randomise_ips(base: dict) -> dict:
 
 
 def inject(attack_type: str, n: int):
-    label, base = ATTACK_MAP[attack_type]
+    entry = ATTACK_MAP.get(attack_type)
+    if not entry:
+        print(f"  Unknown attack type: {attack_type}")
+        return 0
+    label, base = entry
+    if callable(base):
+        base = base()
     print(f"\n🔴 Injecting {n} × {label} alerts → {API}")
     ok = fail = 0
 
     for i in range(1, n + 1):
-        payload = randomise_ips(base)
+        template = ATTACK_MAP[attack_type][1]
+        payload = randomise_ips(template() if callable(template) else template)
         try:
             resp = requests.post(API, json=payload, timeout=5)
             if resp.status_code == 201:
@@ -165,8 +182,8 @@ def inject(attack_type: str, n: int):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='IDS Direct Attack Injector')
-    parser.add_argument('attack', choices=['dos', 'probe', 'r2l', 'u2r', 'all'],
-                        help='Attack type to inject')
+    parser.add_argument('attack', default='all',
+                        help='Attack type: dos, probe, r2l, u2r, novel_*, normal_*, all, novel-all')
     parser.add_argument('--n', type=int, default=10,
                         help='Number of alerts to inject (default: 10)')
     parser.add_argument('--api', default='http://localhost:8000',
@@ -184,7 +201,14 @@ if __name__ == '__main__':
     print(f"  Count        : {args.n}")
     print("=" * 55)
 
-    types = ['dos', 'probe', 'r2l', 'u2r'] if args.attack == 'all' else [args.attack]
+    if args.attack == 'all':
+        types = ['dos', 'probe', 'r2l', 'u2r']
+    elif args.attack == 'novel-all':
+        types = [k for k in ATTACK_MAP if k.startswith('novel_')]
+    elif args.attack == 'normal-all':
+        types = [k for k in ATTACK_MAP if k.startswith('normal_')]
+    else:
+        types = [args.attack]
     total = 0
     for t in types:
         total += inject(t, args.n)

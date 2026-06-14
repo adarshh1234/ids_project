@@ -37,6 +37,12 @@ class Alert(models.Model):
     blockchain_block_index = models.IntegerField(null=True, blank=True)
     blockchain_hash = models.CharField(max_length=64, blank=True)
 
+    # Hybrid anomaly detection metadata
+    anomaly_score = models.FloatField(null=True, blank=True)
+    is_unknown_attack = models.BooleanField(default=False)
+    detection_method = models.CharField(max_length=30, default='supervised')
+    rf_prediction = models.CharField(max_length=50, blank=True, default='')
+
     class Meta:
         ordering = ['-timestamp']
 

@@ -47,6 +47,10 @@ class PredictView(APIView):
             confidence     =result['confidence'],
             severity       =result['severity'],
             description    =result['description'],
+            anomaly_score  =result.get('anomaly_score'),
+            is_unknown_attack=result.get('is_unknown_attack', False),
+            detection_method=result.get('detection_method', 'supervised'),
+            rf_prediction  =result.get('rf_prediction', result['prediction']),
         )
         alert.raw_features     = dict(data)
         alert.shap_explanation = result['shap_explanation']
@@ -79,6 +83,12 @@ class PredictView(APIView):
             'description': result['description'],
             'probabilities': result['probabilities'],
             'top_features':  result['top_features'],
+            'anomaly_score': result.get('anomaly_score'),
+            'is_anomaly':    result.get('is_anomaly', False),
+            'is_unknown_attack': result.get('is_unknown_attack', False),
+            'detection_method':  result.get('detection_method', 'supervised'),
+            'detection_detail':  result.get('detection_detail', ''),
+            'rf_prediction': result.get('rf_prediction', result['prediction']),
             'blockchain': {
                 'tx_hash':      tx_result.get('tx_hash'),
                 'block_number': tx_result.get('block_number'),
@@ -128,11 +138,19 @@ class AlertStatusView(APIView):
 
 class BlockchainView(APIView):
     def get(self, request):
-        ganache = get_ganache()
-        info    = ganache.get_chain_info()
-        alerts  = ganache.get_all_alerts()
-        txs     = ganache.get_recent_transactions(20)
-        return Response({'network_info': info, 'alerts': alerts, 'transactions': txs, 'total_alerts': len(alerts)})
+        try:
+            ganache = get_ganache()
+            print("DEBUG connected:", ganache._connected)
+            print("DEBUG contract:", ganache.contract)
+            info    = ganache.get_chain_info()
+            print("DEBUG info:", info)
+            alerts  = ganache.get_all_alerts()
+            txs     = ganache.get_recent_transactions(20)
+            return Response({'network_info': info, 'alerts': alerts, 'transactions': txs, 'total_alerts': len(alerts)})
+        except Exception as e:
+            print("DEBUG ERROR:", e)
+            import traceback; traceback.print_exc()
+            return Response({'error': str(e)}, status=500)
 
 
 class BlockchainVerifyView(APIView):

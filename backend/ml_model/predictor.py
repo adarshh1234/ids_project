@@ -1,16 +1,24 @@
 """
 ml_model/predictor.py
 =====================
-Loads the trained Random Forest model and provides:
-  - predict(record_dict) → prediction + SHAP explanation
+Hybrid IDS inference:
+  - Random Forest  → known attack classification
+  - Isolation Forest → unknown / zero-day anomaly detection
+  - SHAP           → explainability for supervised predictions
 """
 
-import os
 import pickle
 import shap
 import numpy as np
 import pandas as pd
 from pathlib import Path
+
+from .anomaly_config import (
+    ANOMALY_SEVERITY,
+    ANOMALY_DESCRIPTION,
+    NOVEL_DESCRIPTION,
+    DETECTION_METHODS,
+)
 
 MODEL_DIR = Path(__file__).parent
 
@@ -30,11 +38,12 @@ FEATURE_NAMES = [
 CATEGORICAL_COLS = ['protocol_type', 'service', 'flag']
 
 ATTACK_SEVERITY = {
-    'Normal': 'info',
-    'DoS':    'critical',
-    'Probe':  'warning',
-    'R2L':    'high',
-    'U2R':    'critical',
+    'Normal':  'info',
+    'DoS':     'critical',
+    'Probe':   'warning',
+    'R2L':     'high',
+    'U2R':     'critical',
+    'Unknown': 'critical',
 }
 
 ATTACK_DESCRIPTIONS = {
@@ -43,25 +52,27 @@ ATTACK_DESCRIPTIONS = {
     'Probe':  'Probe/Scan attack detected. Attacker is surveilling the network to gather information.',
     'R2L':    'Remote-to-Local attack detected. Attacker is trying to gain local access from a remote machine.',
     'U2R':    'User-to-Root attack detected. Attacker is exploiting vulnerabilities to gain root/admin access.',
+    'Unknown': ANOMALY_DESCRIPTION,
 }
 
-# ── Minority class threshold config ───────────────────────────────────────────
 UNCERTAINTY_THRESHOLD = 0.60
 MINORITY_THRESHOLD    = 0.15
 MINORITY_CLASSES      = ['R2L', 'U2R']
-# ──────────────────────────────────────────────────────────────────────────────
+HYBRID_CONFIDENCE_FLOOR = 0.70
 
 
 class IDSPredictor:
     _instance = None
 
     def __init__(self):
-        self.model          = None
-        self.scaler         = None
-        self.label_encoders = None
-        self.feature_cols   = None
-        self.explainer      = None   # SHAP explainer cached here
-        self._loaded        = False
+        self.model           = None
+        self.anomaly_model   = None
+        self.anomaly_config  = None
+        self.scaler          = None
+        self.label_encoders  = None
+        self.feature_cols    = None
+        self.explainer       = None
+        self._loaded         = False
 
     @classmethod
     def get_instance(cls):
@@ -82,8 +93,15 @@ class IDSPredictor:
             with open(MODEL_DIR / 'feature_cols.pkl', 'rb') as f:
                 self.feature_cols = pickle.load(f)
 
-            # Build SHAP explainer once at load time — reused for every prediction
             self.explainer = shap.TreeExplainer(self.model)
+
+            anomaly_path = MODEL_DIR / 'anomaly_model.pkl'
+            config_path  = MODEL_DIR / 'anomaly_config.pkl'
+            if anomaly_path.exists() and config_path.exists():
+                with open(anomaly_path, 'rb') as f:
+                    self.anomaly_model = pickle.load(f)
+                with open(config_path, 'rb') as f:
+                    self.anomaly_config = pickle.load(f)
 
             self._loaded = True
             return True
@@ -106,6 +124,54 @@ class IDSPredictor:
         X = df[self.feature_cols].values
         return self.scaler.transform(X)
 
+    def _rule_based_anomaly(self, record: dict) -> bool:
+        """Heuristic checks for patterns unlikely in normal traffic."""
+        count = record.get('count', 0)
+        dst_bytes = record.get('dst_bytes', 0)
+        src_bytes = record.get('src_bytes', 0)
+        duration = record.get('duration', 0)
+        serror = record.get('serror_rate', 0)
+        diff_srv = record.get('diff_srv_rate', 0)
+        num_failed = record.get('num_failed_logins', 0)
+        wrong_frag = record.get('wrong_fragment', 0)
+
+        if count > 300 and record.get('protocol_type') == 'icmp':
+            return True
+        if dst_bytes > 500000 and src_bytes < 5000:
+            return True
+        if duration > 3600 and record.get('service') == 'other' and dst_bytes > 100000:
+            return True
+        if serror > 0.8 and count > 100:
+            return True
+        if diff_srv > 0.9 and count > 50 and record.get('protocol_type') == 'udp':
+            return True
+        if num_failed > 15:
+            return True
+        if wrong_frag > 5:
+            return True
+        return False
+
+    def _anomaly_score(self, X: np.ndarray) -> tuple:
+        if self.anomaly_model is None:
+            return 0.0, False
+
+        score = float(self.anomaly_model.decision_function(X)[0])
+        threshold = self.anomaly_config.get('anomaly_threshold', 0.0)
+        is_anomaly = score < threshold or self.anomaly_model.predict(X)[0] == -1
+        return score, is_anomaly
+
+    def _hybrid_decision(self, rf_prediction, max_prob, is_anomaly, anomaly_score):
+        if not is_anomaly:
+            return rf_prediction, 'supervised', max_prob
+
+        if rf_prediction == 'Normal' or max_prob < HYBRID_CONFIDENCE_FLOOR:
+            anomaly_confidence = min(99.0, max(55.0, (1.0 - (anomaly_score + 0.5)) * 100))
+            method = 'anomaly_override' if rf_prediction == 'Normal' else 'anomaly'
+            return 'Unknown', method, anomaly_confidence / 100.0
+
+        novel_confidence = max(max_prob, 0.75)
+        return f'{rf_prediction} (Novel)', 'hybrid', novel_confidence
+
     def predict(self, record: dict) -> dict:
         if not self._loaded:
             if not self.load():
@@ -113,60 +179,75 @@ class IDSPredictor:
 
         X = self._encode_record(record)
 
-        # ── Raw model output ───────────────────────────────────────────────────
-        prediction    = self.model.predict(X)[0]
+        rf_prediction = self.model.predict(X)[0]
         probabilities = self.model.predict_proba(X)[0]
         classes       = list(self.model.classes_)
-
-        # ── Minority class threshold override ──────────────────────────────────
-        max_prob = float(max(probabilities))
+        max_prob      = float(max(probabilities))
 
         if max_prob < UNCERTAINTY_THRESHOLD:
             for minority_class in MINORITY_CLASSES:
                 if minority_class in classes:
-                    idx           = classes.index(minority_class)
-                    minority_prob = float(probabilities[idx])
-                    if minority_prob > MINORITY_THRESHOLD:
-                        prediction = minority_class
+                    idx = classes.index(minority_class)
+                    if float(probabilities[idx]) > MINORITY_THRESHOLD:
+                        rf_prediction = minority_class
+                        max_prob = float(probabilities[idx])
                         break
-        # ──────────────────────────────────────────────────────────────────────
+
+        anomaly_score, is_anomaly = self._anomaly_score(X)
+        if self._rule_based_anomaly(record):
+            is_anomaly = True
+
+        prediction, detection_method, effective_prob = self._hybrid_decision(
+            rf_prediction, max_prob, is_anomaly, anomaly_score
+        )
 
         prob_dict  = {cls: float(round(prob * 100, 2)) for cls, prob in zip(classes, probabilities)}
-        confidence = float(round(max_prob * 100, 2))
+        confidence = float(round(effective_prob * 100, 2))
 
-        # ── Real SHAP explanation ──────────────────────────────────────────────
-        shap_values = self._get_shap(X, prediction, classes)
+        if prediction == 'Unknown':
+            severity = ANOMALY_SEVERITY
+            description = ANOMALY_DESCRIPTION
+        elif '(Novel)' in prediction:
+            base = prediction.replace(' (Novel)', '')
+            severity = ATTACK_SEVERITY.get(base, 'high')
+            description = NOVEL_DESCRIPTION
+        else:
+            severity = ATTACK_SEVERITY.get(prediction, 'info')
+            description = ATTACK_DESCRIPTIONS.get(prediction, '')
+
+        shap_values = self._get_shap(X, rf_prediction, classes)
 
         return {
-            'prediction':       prediction,
-            'confidence':       confidence,
-            'probabilities':    prob_dict,
-            'severity':         ATTACK_SEVERITY.get(prediction, 'info'),
-            'description':      ATTACK_DESCRIPTIONS.get(prediction, ''),
-            'shap_explanation': shap_values,
-            'top_features':     self._top_features(shap_values),
+            'prediction':        prediction,
+            'rf_prediction':     rf_prediction,
+            'confidence':        confidence,
+            'probabilities':     prob_dict,
+            'severity':          severity,
+            'description':       description,
+            'shap_explanation':  shap_values,
+            'top_features':      self._top_features(shap_values),
+            'anomaly_score':     round(anomaly_score, 4),
+            'is_anomaly':        is_anomaly,
+            'is_unknown_attack': prediction == 'Unknown' or '(Novel)' in prediction,
+            'detection_method':  detection_method,
+            'detection_detail':  DETECTION_METHODS.get(detection_method, detection_method),
         }
 
     def _get_shap(self, X, prediction, classes) -> dict:
         shap_values = self.explainer.shap_values(X)
-        class_index = classes.index(prediction)
+        class_index = classes.index(prediction) if prediction in classes else 0
 
-    # Handle both old SHAP (list) and new SHAP (3D numpy array)
         if isinstance(shap_values, list):
-        # Old SHAP — list of arrays, one per class
             vals = shap_values[class_index][0]
         elif hasattr(shap_values, 'ndim') and shap_values.ndim == 3:
-        # New SHAP — shape is (n_samples, n_features, n_classes)
             vals = shap_values[0, :, class_index]
         else:
-        # Fallback — binary or single output
-             vals = shap_values[0]
+            vals = shap_values[0]
 
-        explanation = {
+        return {
             col: float(val)
             for col, val in zip(self.feature_cols, vals)
-    }
-        return explanation
+        }
 
     def _top_features(self, shap_dict: dict, n: int = 10) -> list:
         sorted_feats = sorted(shap_dict.items(), key=lambda x: abs(x[1]), reverse=True)
@@ -174,7 +255,7 @@ class IDSPredictor:
             {
                 'feature':    k,
                 'shap_value': v,
-                'impact':     'positive' if v > 0 else 'negative'
+                'impact':     'positive' if v > 0 else 'negative',
             }
             for k, v in sorted_feats[:n]
         ]

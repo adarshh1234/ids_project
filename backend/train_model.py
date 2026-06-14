@@ -14,7 +14,7 @@ import pickle
 import argparse
 import numpy as np
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, IsolationForest
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
@@ -34,7 +34,7 @@ FEATURE_NAMES = [
 
 CATEGORICAL_COLS = ['protocol_type', 'service', 'flag']
 
-# Attack category mapping (5-class)
+# Attack category mapping (5-class) 
 ATTACK_CATEGORY = {
     'normal': 'Normal',
     # DoS
@@ -140,14 +140,50 @@ def train(train_path, test_path, output_dir='ml_model'):
     with open(os.path.join(output_dir, 'feature_cols.pkl'), 'wb') as f:
         pickle.dump(feature_cols, f)
 
+    print("\n🔍 Training Anomaly Detector (Isolation Forest on normal traffic)...")
+    normal_mask = y_train == 'Normal'
+    X_normal = X_train[normal_mask]
+    print(f"   Normal samples for anomaly baseline: {len(X_normal):,}")
+
+    iso_forest = IsolationForest(
+        n_estimators=200,
+        contamination=0.05,
+        max_samples='auto',
+        random_state=42,
+        n_jobs=-1,
+    )
+    iso_forest.fit(X_normal)
+
+    normal_scores = iso_forest.decision_function(X_normal)
+    anomaly_threshold = float(np.percentile(normal_scores, 5))
+    print(f"   Anomaly threshold (5th percentile): {anomaly_threshold:.4f}")
+
+    attack_mask = y_test != 'Normal'
+    if attack_mask.any():
+        attack_scores = iso_forest.decision_function(X_test[attack_mask])
+        attack_anomaly_rate = float((attack_scores < anomaly_threshold).mean() * 100)
+        print(f"   Known attacks flagged as anomalous: {attack_anomaly_rate:.1f}%")
+
+    with open(os.path.join(output_dir, 'anomaly_model.pkl'), 'wb') as f:
+        pickle.dump(iso_forest, f)
+    with open(os.path.join(output_dir, 'anomaly_config.pkl'), 'wb') as f:
+        pickle.dump({
+            'anomaly_threshold': anomaly_threshold,
+            'contamination': 0.05,
+            'normal_samples': len(X_normal),
+        }, f)
+
     print(f"\n✅ Model artifacts saved to '{output_dir}/'")
+    print("   • rf_model.pkl          — supervised classifier")
+    print("   • anomaly_model.pkl     — unknown attack detector")
+    print("   • anomaly_config.pkl    — calibrated thresholds")
     return acc
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--train', default='KDDTrain_.txt')
-    parser.add_argument('--test',  default='KDDTest_.txt')
+    parser.add_argument('--train', default='dataset/KDDTrain+.txt')
+    parser.add_argument('--test',  default='dataset/KDDTest+.txt')
     parser.add_argument('--out',   default='ml_model')
     args = parser.parse_args()
     train(args.train, args.test, args.out)
