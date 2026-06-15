@@ -474,20 +474,7 @@ python capture.py --iface "\Device\NPF_{YOUR-INTERFACE}" --api http://localhost:
 
 ---
 
-## 🚀 Production Recommendations
 
-See `PRODUCTION.md` for full details. Key upgrades:
-
-| Priority | Recommendation |
-|---|---|
-| High | Switch SQLite → PostgreSQL |
-| High | Add JWT authentication to all API endpoints |
-| High | Set DEBUG=False, use environment variables for secrets |
-| High | Retrain on modern datasets (CIC-IDS2017, UNSW-NB15) |
-| Medium | Deploy to Ethereum Sepolia testnet (persistent blockchain) |
-| Medium | Run capture agent as Windows service |
-| Medium | Django Channels + WebSockets for real-time alerts |
-| Low | Deep learning autoencoder for improved zero-day detection |
 
 ---
 
