@@ -17,17 +17,7 @@ provides real-time monitoring, alerts, blockchain audit trail, and manual predic
 
 ---
 
-## 🆕 What's New (Upgraded from v1)
 
-| Feature | Before | After |
-|---|---|---|
-| Detection | Random Forest only (known attacks) | Hybrid: RF + Isolation Forest (known + unknown) |
-| Zero-day detection | ❌ None | ✅ Isolation Forest catches novel attacks |
-| Live capture | ❌ None | ✅ Scapy + Npcap real-time packet capture |
-| Blockchain | Custom SHA-256 PoW (chain.json) | Ethereum smart contract on Ganache (Web3.py) |
-| Attack simulation | ❌ None | ✅ 7 attack types + novel attack generator |
-| Unknown attacks | ❌ None | ✅ DNS tunneling, crypto mining, IoT botnet, etc. |
-| Test pipeline | ❌ None | ✅ Automated 11-test validation suite |
 
 ---
 
